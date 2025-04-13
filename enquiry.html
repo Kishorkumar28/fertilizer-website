@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Product Enquiry - fertilizer.map</title>
+    <title>Product Enquiry - MAP</title>
     <meta name="description" content="Submit your enquiry about our organic fertilizer products">
     
     <!-- Resource hints for performance -->
@@ -53,25 +53,23 @@
 </head>
 <body class="font-sans antialiased">
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-20">
-                <!-- Back Button -->
-                <a href="products.html" class="flex items-center text-brand-primary hover:text-brand-dark transition-colors">
-                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                    </svg>
-                    <span class="font-medium">Back to Products</span>
-                </a>
-                
-                <!-- Logo -->
-                <a href="products.html" class="text-2xl font-bold text-brand-primary flex items-center">
-                    <span class="mr-2">🌱</span> fertilizer.map
-                </a>
-                
-                <!-- Spacer to maintain centering of logo -->
-                <div class="w-24"></div>
-            </div>
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-800 logo-text">
+                <img src="image/Logo/logo.png" alt="MAP logo" class="h-8 mr-2">
+                <span class="logo-text"><span class="logo-m">M</span><span class="logo-a">A</span><span class="logo-p">P</span></span>
+            </a>
+            
+            <!-- Back Button -->
+            <a href="products.html" class="flex items-center text-brand-primary hover:text-brand-dark transition-colors">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                <span class="font-medium">Back to Products</span>
+            </a>
+            
+            <!-- Spacer to maintain centering of logo -->
+            <div class="w-24"></div>
         </div>
     </nav>
 
@@ -226,7 +224,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div>
-                    <h2 class="animate-on-scroll" data-animation="fade-in" class="text-xl font-bold mb-4 text-white">fertilizer.map</h2>
+                    <h2 class="animate-on-scroll" data-animation="fade-in" class="text-xl font-bold mb-4 text-white">MAP</h2>
                     <p class="text-gray-400 mb-4">Providing sustainable and organic fertilizer solutions for modern agriculture, gardens, and landscaping.</p>
                     <div class="flex space-x-4">
                         <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
@@ -274,7 +272,7 @@
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                             </svg>
-                            <span class="text-gray-400">info@fertilizer.map</span>
+                            <span class="text-gray-400">info@map.com</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -297,7 +295,7 @@
             </div>
             
             <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between">
-                <p class="text-gray-500 text-sm">© 2023 fertilizer.map. All rights reserved.</p>
+                <p class="text-gray-500 text-sm">© 2023 MAP. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="text-gray-500 hover:text-white text-sm">Privacy Policy</a>
                     <a href="#" class="text-gray-500 hover:text-white text-sm">Terms of Service</a>
@@ -368,7 +366,7 @@
                 
                 // Update product image
                 document.getElementById('product-image').innerHTML = `
-                    <img src="https://source.unsplash.com/random/800x600/?farming" alt="fertilizer.map products" class="w-full h-48 object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/800x600/?farming" alt="MAP products" class="w-full h-48 object-cover rounded-lg">
                 `;
             }
             
@@ -408,7 +406,7 @@
             
             if (product) {
                 // Update page title
-                document.title = `Enquiry: ${product.name} - fertilizer.map`;
+                document.title = `Enquiry: ${product.name} - MAP`;
                 
                 // Update product title
                 document.getElementById('product-title').textContent = product.name;
@@ -449,7 +447,7 @@
                 
                 // Update product image
                 document.getElementById('product-image').innerHTML = `
-                    <img src="https://source.unsplash.com/random/800x600/?farming" alt="fertilizer.map products" class="w-full h-48 object-cover rounded-lg">
+                    <img src="https://source.unsplash.com/random/800x600/?farming" alt="MAP products" class="w-full h-48 object-cover rounded-lg">
                 `;
             }
         }
@@ -519,6 +517,9 @@
             }, 5000);
         }
     </script>
+    
+    <!-- Logo Styling -->
+    <script src="js/logo-styles.js"></script>
 </body>
 </html>
 

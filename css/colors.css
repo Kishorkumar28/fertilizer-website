@@ -8,6 +8,10 @@
   --brand-secondary: #699d80;   /* Secondary brand color */
   --brand-accent: #82b99c;      /* Accent color */
   
+  /* Logo colors */
+  --logo-mp-color: #14643c;     /* M and P color in logo - dark green */
+  --logo-a-color: #68ba86;      /* A color in logo - light green */
+  
   /* Neutral Colors */
   --neutral-100: #ffffff;       /* White */
   --neutral-200: #f9fafb;       /* Off white */
@@ -138,3 +142,19 @@
   --tw-brand-secondary: 105, 157, 128;
   --tw-brand-accent: 130, 185, 156;
 } 
+
+/* MAP logo styling */
+.logo-text {
+  font-weight: 700;
+}
+
+.logo-m, 
+.logo-p {
+  color: #14643c; /* Dark green for M and P */
+}
+
+.logo-a {
+  color: #68ba86; /* Light green for A */
+}
+
+/* Remove individual letter styling since we're styling the entire MAP now */ 
