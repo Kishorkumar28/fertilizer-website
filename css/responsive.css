@@ -12,6 +12,16 @@
 
 /* Extra small devices (phones, 640px and down) */
 @media only screen and (max-width: 640px) {
+
+  .logo-text {
+    font-weight: 700;
+  }
+
+  #social-buttons{
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
   /* Adjust text sizes for better readability on small screens */
   h1, .h1 {
     font-size: 2rem !important; /* 32px */
@@ -107,6 +117,7 @@
     font-size: 16px !important; /* Prevents auto-zoom on iOS */
   }
 }
+
 
 /* Small devices (tablets, 641px to 768px) */
 @media only screen and (min-width: 641px) and (max-width: 768px) {

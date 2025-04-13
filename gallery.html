@@ -33,11 +33,14 @@
    <!-- Navbar -->
    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-20">
+        <div class="flex justify-between items-center h-16">
             <!-- Logo -->
-            <a href="index.html" class="text-2xl font-bold text-brand-primary flex items-center">
-                <img src="image/Logo/logo.png" alt="MAP logo" class="h-8 mr-2">
-                <span class="logo-text"><span class="logo-m">M</span><span class="logo-a">A</span><span class="logo-p">P</span></span>
+            <a href="index.html"  id="navbar-logo">
+                <div class="text-2xl font-bold text-brand-primary flex items-center">
+                    <img src="image/Logo/logo.png" alt="MAP logo" class="h-8 mr-2">
+                    <span class="logo-text"><span class="logo-m">M</span><span class="logo-a">A</span><span class="logo-p">P</span></span>
+                </div>
+                
             </a>
             
             <!-- Navigation Links - Desktop -->
@@ -72,8 +75,12 @@
     </div>
 </nav>
 
+<main class="pt-16">  <!-- 👈 Add this to push the content below the fixed navbar -->
+        
+</main>
+
     <!-- Gallery Hero Section -->
-    <section data-aos="fade-up" class="pt-32 md:pt-40 pb-16 bg-brand-light relative overflow-hidden">
+    <section data-aos="fade-up" class="pt-32 md:pt-20 pb-16 bg-brand-light relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute -top-10 -left-10 w-40 h-40 md:w-60 md:h-60 bg-brand-secondary rounded-full opacity-20 animate-pulse"></div>
         <div class="absolute top-20 right-10 w-24 h-24 md:w-36 md:h-36 bg-brand-primary rounded-full opacity-10 animate-ping" style="animation-duration: 3s;"></div>
@@ -111,7 +118,7 @@
                                      class="w-full h-32 md:h-40 object-cover">
                             </div>
                         </div>
-                        <div class="absolute -bottom-4 -right-4 bg-white rounded-lg p-3 shadow-lg z-20">
+                        <!-- <div class="absolute -bottom-4 -right-4 bg-white rounded-lg p-3 shadow-lg z-20">
                             <div class="flex items-center gap-2">
                                 <div class="bg-green-100 rounded-full p-2">
                                     <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -120,7 +127,7 @@
                                 </div>
                                 <p class="font-medium text-sm">Real Results</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -186,7 +193,6 @@
         }
     </style>
     
-    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Gallery Grid -->
     <section data-aos="fade-up" class="py-16">

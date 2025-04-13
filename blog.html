@@ -33,11 +33,14 @@
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl font-bold text-gray-800 logo-text">
-                    <img src="image/Logo/logo.png" alt="MAP logo" class="h-8 mr-2">
-                    <span class="logo-text"><span class="logo-m">M</span><span class="logo-a">A</span><span class="logo-p">P</span></span>
+                <a href="index.html"  id="navbar-logo">
+                    <div class="text-2xl font-bold text-brand-primary flex items-center">
+                        <img src="image/Logo/logo.png" alt="MAP logo" class="h-8 mr-2">
+                        <span class="logo-text"><span class="logo-m">M</span><span class="logo-a">A</span><span class="logo-p">P</span></span>
+                    </div>
+                    
                 </a>
                 
                 <!-- Navigation Links - Desktop -->
@@ -72,8 +75,11 @@
         </div>
     </nav>
 
+    <main class="pt-16">  <!-- 👈 Add this to push the content below the fixed navbar -->
+        
+    </main>
     <!-- Blog Hero Section -->
-    <section data-aos="fade-up" class="pt-32 md:pt-40 pb-16 bg-brand-light relative overflow-hidden">
+    <section data-aos="fade-up" class="pt-32 md:pt-20 pb-16 bg-brand-light relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute top-20 -left-10 w-40 h-40 md:w-56 md:h-56 bg-brand-secondary rounded-full opacity-20 animate-pulse"></div>
         <div class="absolute -top-10 right-20 w-28 h-28 md:w-40 md:h-40 bg-brand-primary rounded-full opacity-10 animate-ping" style="animation-duration: 4s;"></div>
