@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Blog Article - fertilizer.map</title>
+    <meta name="description" content="Read about sustainable agriculture practices and eco-friendly fertilizer solutions">
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-light': '#cbdfd4',
+                        'brand-primary': '#1c9444',
+                        'brand-dark': '#14643c',
+                        'brand-secondary': '#699d80',
+                        'brand-accent': '#82b99c'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Mobile menu transitions */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        #mobile-menu.open {
+            max-height: 300px;
+        }
+        
+        /* Article content styles */
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+        
+        .article-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .article-content ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-content a {
+            color: #1c9444;
+            text-decoration: underline;
+        }
+        
+        .article-content a:hover {
+            color: #14643c;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid #1c9444;
+            padding-left: 1rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+            color: #4b5563;
+        }
+    </style>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <script src="js/tailwind-config.js"></script>
+    <script src="js/modern-effects.js" defer></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-brand-primary flex items-center">
+                    <span class="mr-2">🌱</span> fertilizer.map
+                </a>
+                
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Products</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Gallery</a>
+                    <a href="blog.html" class="text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-brand-primary">Blog</a>
+                    <!-- <a href="add-testimonial.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Add Testimonial</a> -->
+                    <a href="contact.html" class="bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-colors shadow-sm hover:shadow-md ml-2">Contact Us</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-primary/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" aria-hidden="true" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0">
+                <div class="py-3 space-y-3 border-t border-gray-200">
+                    <a href="index.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                    <a href="products.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Products</a>
+                    <a href="gallery.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Gallery</a>
+                    <a href="blog.html" class="block py-2 px-4 text-brand-primary font-medium bg-gray-50 rounded-md transition-colors">Blog</a>
+                    <!-- <a href="add-testimonial.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Add Testimonial</a> -->
+                    <a href="contact.html" class="block py-2 px-4 text-brand-primary hover:text-white hover:bg-brand-primary rounded-md transition-colors mt-2 border border-brand-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section data-aos="fade-up" class="pt-32 pb-8 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center mb-4 text-sm">
+                    <a href="blog.html" class="text-brand-primary hover:text-brand-dark flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        Back to Blog
+                    </a>
+                    <span class="mx-2 text-gray-400">|</span>
+                    <span id="article-category" class="text-gray-600">Research & Innovation</span>
+                </div>
+                
+                <h1 class="animate-on-scroll" data-animation="fade-in" id="article-title" class="text-4xl md:text-5xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                    The Future of Sustainable Agriculture: Organic Fertilizers
+                </h1>
+                
+                <div class="flex items-center mb-8">
+                    <img id="author-image" class="h-10 w-10 rounded-full border-2 border-brand-light" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Author">
+                    <div class="ml-3">
+                        <p id="author-name" class="text-sm font-medium text-gray-900">Dr. Sarah Johnson</p>
+                        <p id="article-meta" class="text-sm text-gray-500">March 15, 2024 • 8 min read</p>
+                    </div>
+                    <div class="ml-auto flex items-center space-x-4">
+                        <button class="magnetic-button glow-on-hover class="flex items-center text-gray-500 hover:text-brand-primary">
+                            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                            Share
+                        </button>
+                        <button class="magnetic-button glow-on-hover class="flex items-center text-gray-500 hover:text-brand-primary">
+                            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Image -->
+    <div class="container mx-auto px-4 -mt-8">
+        <div class="max-w-4xl mx-auto">
+            <img id="article-image" src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" 
+                 alt="Sustainable Farming Practices" 
+                 class="w-full h-auto rounded-xl shadow-lg object-cover" 
+                 data-aos="fade-up">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <section data-aos="fade-up" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div id="article-content" class="article-content text-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <p>Discover how organic fertilizers are revolutionizing modern farming practices while promoting environmental sustainability and soil health. Our research shows a 35% increase in crop yield when using properly formulated organic fertilizers versus conventional methods.</p>
+                    
+                    <h2>The Problem with Conventional Fertilizers</h2>
+                    <p>For decades, conventional agriculture has relied heavily on synthetic fertilizers to maximize crop yields. These fertilizers, while effective in the short term, have contributed to several environmental issues:</p>
+                    <ul>
+                        <li>Soil degradation and loss of natural fertility</li>
+                        <li>Water pollution through nutrient runoff</li>
+                        <li>Reduced microbial activity in soil</li>
+                        <li>Increased greenhouse gas emissions</li>
+                    </ul>
+                    
+                    <p>As global food demand continues to rise, the agricultural industry faces a significant challenge: how to increase production while reducing environmental impact. This is where organic fertilizers come into play.</p>
+                    
+                    <h2>The Benefits of Organic Fertilizers</h2>
+                    <p>Organic fertilizers offer numerous advantages over their synthetic counterparts:</p>
+                    
+                    <h3>Improved Soil Health</h3>
+                    <p>Unlike synthetic fertilizers that can deplete soil over time, organic fertilizers enhance soil structure and promote beneficial microbial activity. This leads to improved water retention, reduced erosion, and enhanced nutrient cycling.</p>
+                    
+                    <blockquote>
+                        "Healthy soil is the foundation of sustainable agriculture. When we focus on building soil health through organic inputs, we're investing in the long-term productivity of our farming systems." - Dr. Emily Chen, Soil Scientist
+                    </blockquote>
+                    
+                    <h3>Slow-Release Nutrition</h3>
+                    <p>Organic fertilizers release nutrients slowly as they decompose, providing a steady supply of nutrition to plants over an extended period. This reduces nutrient leaching and runoff, while ensuring plants have access to nutrients when they need them.</p>
+                    
+                    <h3>Environmental Benefits</h3>
+                    <p>By reducing chemical inputs and promoting soil health, organic fertilizers help:
+                    <ul>
+                        <li>Decrease water pollution from nutrient runoff</li>
+                        <li>Sequester carbon in the soil, helping mitigate climate change</li>
+                        <li>Reduce dependence on fossil fuel-derived inputs</li>
+                        <li>Promote biodiversity both above and below ground</li>
+                    </ul>
+                    
+                    <h2>Our Research Findings</h2>
+                    <p>At fertilizer.map, we've conducted extensive field trials comparing organic and conventional fertilization methods. Our findings reveal that properly formulated organic fertilizers can increase crop yields by up to 35% compared to conventional methods over a three-year period.</p>
+                    
+                    <p>Furthermore, our research indicates that soils treated with organic fertilizers showed:</p>
+                    <ul>
+                        <li>42% higher microbial biomass</li>
+                        <li>27% improved water retention capacity</li>
+                        <li>33% reduction in nutrient leaching</li>
+                    </ul>
+                    
+                    <h2>The Future of Sustainable Agriculture</h2>
+                    <p>As we move toward a more sustainable agricultural future, organic fertilizers will play an increasingly important role. By harnessing the power of natural processes and focusing on soil health, we can develop farming systems that are productive, profitable, and environmentally sound.</p>
+                    
+                    <p>At fertilizer.map, we're committed to leading this transition through innovative organic fertilizer solutions designed to enhance crop productivity while promoting environmental stewardship.</p>
+                    
+                    <p>Learn more about our range of <a href="products.html">organic fertilizer products</a> or <a href="contact.html">contact us</a> to discuss how we can help improve your farming operations.</p>
+                </div>
+                
+                <!-- Author Bio -->
+                <div class="mt-12 p-6 bg-gray-50 rounded-xl border border-gray-200" data-aos="fade-up">
+                    <div class="flex items-start">
+                        <img class="h-16 w-16 rounded-full mr-4" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Dr. Sarah Johnson">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">About the Author</h3>
+                            <p class="text-gray-700 mt-1">Dr. Sarah Johnson is an agricultural scientist with over 15 years of experience in sustainable farming practices. She leads research and development at fertilizer.map, focusing on innovative organic fertilizer solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Articles -->
+                <div class="mt-16" data-aos="fade-up">
+                    <h2 class="animate-on-scroll" data-animation="fade-in" class="text-2xl font-bold text-gray-800 mb-6">Related Articles</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <a href="blog-details.html" class="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                                     alt="Soil Health" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">Soil Science</div>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-brand-primary transition-colors">Understanding Soil Health Indicators</h3>
+                                <p class="text-gray-600 mt-2 text-sm">Learn about key indicators that help determine your soil's health and fertility status.</p>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                                     alt="Crop Rotation" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute top-2 left-2 bg-green-400 text-green-900 text-xs font-bold px-2 py-1 rounded">Sustainable Farming</div>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-brand-primary transition-colors">Benefits of Crop Rotation</h3>
+                                <p class="text-gray-600 mt-2 text-sm">Explore how rotating crops can improve soil fertility and reduce pest problems naturally.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Comment Section -->
+                <div class="mt-16" data-aos="fade-up">
+                    <h2 class="animate-on-scroll" data-animation="fade-in" class="text-2xl font-bold text-gray-800 mb-6">Discussion</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <form>
+                            <div class="mb-4">
+                                <label for="comment" class="block text-gray-700 font-medium mb-2">Leave a comment</label>
+                                <textarea id="comment" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all duration-300"></textarea>
+                            </div>
+                            <button class="magnetic-button glow-on-hover type="submit" class="bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-colors">
+                                Post Comment
+                            </button>
+                        </form>
+                        
+                        <div class="mt-8 space-y-6">
+                            <div class="flex">
+                                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User">
+                                <div class="ml-4">
+                                    <div class="flex items-center">
+                                        <h4 class="font-semibold text-gray-900">John Davis</h4>
+                                        <span class="ml-2 text-sm text-gray-500">2 days ago</span>
+                                    </div>
+                                    <p class="mt-1 text-gray-700">Great article! I've been using organic fertilizers on my farm for the past two years and have seen significant improvements in soil quality.</p>
+                                    <button class="magnetic-button glow-on-hover class="mt-2 text-sm text-brand-primary hover:text-brand-dark">Reply</button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User">
+                                <div class="ml-4">
+                                    <div class="flex items-center">
+                                        <h4 class="font-semibold text-gray-900">Maria Rodriguez</h4>
+                                        <span class="ml-2 text-sm text-gray-500">1 day ago</span>
+                                    </div>
+                                    <p class="mt-1 text-gray-700">Do you have any recommendations for small-scale gardeners who want to start using organic fertilizers?</p>
+                                    <button class="magnetic-button glow-on-hover class="mt-2 text-sm text-brand-primary hover:text-brand-dark">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">fertilizer.map</h3>
+                    <p class="text-gray-400">Growing better crops, naturally.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white">Products</a></li>
+                        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@fertilizer.map</li>
+                        <li>+1 234 567 890</li>
+                        <li>123 Farming Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 fertilizer.map. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts at the end of the body -->
+    <script src="js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            disable: window.innerWidth < 768 // Disable on mobile for better performance
+        });
+        
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                    const expanded = mobileMenu.classList.contains('open');
+                    mobileMenuBtn.setAttribute('aria-expanded', expanded);
+                    mobileMenu.setAttribute('aria-hidden', !expanded);
+                });
+            }
+        });
+    </script>
+    
+    <!-- Data and Dynamic Loading -->
+    <script src="js/data/blog.js"></script>
+    <script src="js/blog-loader.js"></script>
+</body>
+</html> 
+

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>fertilizer.map - Grow Better. Naturally.</title>
+    <meta name="description" content="Premium eco-friendly fertilizers for better crop yields and sustainable farming practices">
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- 
+    NOTE: Tailwind CDN is for development only. 
+    For production, replace with a proper build:
+    1. Install via npm: npm install -D tailwindcss
+    2. Initialize: npx tailwindcss init
+    3. Build CSS: npx tailwindcss -i input.css -o output.css
+    Learn more: https://tailwindcss.com/docs/installation
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/tailwind-config.js"></script>
+    <script src="js/modern-effects.js" defer></script>
+    <style>
+        /* Ensure container is consistent across all pages */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Text shadow for better readability over video backgrounds */
+        .text-shadow-lg {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-brand-primary flex items-center">
+                    <span class="mr-2">🌱</span> fertilizer.map
+                </a>
+                
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Products</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Gallery</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Blog</a>
+                    <!-- <a href="add-testimonial.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Add Testimonial</a> -->
+                    <a href="contact.html" class="bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-colors shadow-sm hover:shadow-md ml-2">Contact Us</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-primary/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" aria-hidden="true" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0">
+                <div class="py-3 space-y-3 border-t border-gray-200">
+                    <a href="index.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                    <a href="products.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Products</a>
+                    <a href="gallery.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Gallery</a>
+                    <a href="blog.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Blog</a>
+                    <!-- <a href="add-testimonial.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Add Testimonial</a> -->
+                    <a href="contact.html" class="block py-2 px-4 text-brand-primary hover:text-white hover:bg-brand-primary rounded-md transition-colors mt-2 border border-brand-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 md:pt-40 pb-16 md:pb-24 bg-brand-light relative overflow-hidden">
+        <!-- Background Video -->
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+            <video autoplay muted loop playsinline class="absolute min-w-full min-h-full object-cover w-auto h-auto opacity-100">
+                <source src="video/Home/germination-background.mp4" type="video/mp4">
+            </video>
+            <!-- Darkened overlay to improve content visibility -->
+            <div class="absolute inset-0 bg-brand-primary/15 backdrop-blur z-[1]"></div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 left-0 w-40 h-40 md:w-64 md:h-64 bg-brand-secondary rounded-full opacity-20 animate-pulse z-10"></div>
+        <div class="absolute top-40 right-0 w-32 h-32 md:w-48 md:h-48 bg-brand-primary rounded-full opacity-10 animate-ping z-10" style="animation-duration: 4s;"></div>
+        <div class="absolute bottom-10 left-1/4 w-24 h-24 md:w-40 md:h-40 bg-brand-accent rounded-full opacity-15 animate-pulse z-10" style="animation-duration: 3s;"></div>
+        
+        <div class="container mx-auto px-4 relative z-20">
+            <!-- Content Area -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <h1 class="animate-on-scroll text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight text-shadow-lg">
+                        About <span class="text-green-400">fertilizer.map</span>
+                    </h1>
+                    
+                    <!-- Decorative divider with animated elements -->
+                    <div class="flex items-center mb-6 overflow-hidden relative">
+                        <div class="h-0.5 bg-gradient-to-r from-brand-primary/20 to-brand-primary flex-grow"></div>
+                        <div class="flex space-x-3 px-3 relative">
+                            <!-- Animated plant icon -->
+                            <div class="w-8 h-8 bg-black/50 backdrop-filter backdrop-blur-sm rounded-full flex items-center justify-center animate-bounce" style="animation-duration: 2s;">
+                                <svg class="w-5 h-5 text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2a10 10 0 0 0-6.88 2.77A11.93 11.93 0 0 0 5 17v4a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H8v-3a4 4 0 0 1 4-4 4 4 0 0 1 4 4v3h-1.5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1H18a1 1 0 0 0 1-1v-4c0-5.08-.25-8.86-2.43-11.95A8 8 0 0 0 12 2z"/>
+                                </svg>
+                            </div>
+                            <!-- Water drop icon -->
+                            <div class="w-8 h-8 bg-black/50 backdrop-filter backdrop-blur-sm rounded-full flex items-center justify-center animate-pulse" style="animation-duration: 3s;">
+                                <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                </svg>
+                            </div>
+                            <!-- Sun icon -->
+                            <div class="w-8 h-8 bg-black/50 backdrop-filter backdrop-blur-sm rounded-full flex items-center justify-center animate-spin" style="animation-duration: 8s;">
+                                <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0-6a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V4a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1zM4 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H4zm16 0a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2h-1zM6.34 17.66a1 1 0 0 1-1.42-1.42l.71-.7a1 1 0 0 1 1.42 1.4l-.71.72zm12.02-12.02a1 1 0 0 1-1.42-1.42l.71-.7a1 1 0 0 1 1.42 1.4l-.71.72zm0 12.02-.71-.72a1 1 0 0 1 1.42-1.4l.7.7a1 1 0 0 1-1.41 1.42zM6.34 6.34 5.64 5.64a1 1 0 0 1 1.41-1.42l.71.71a1 1 0 0 1-1.42 1.41z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="h-0.5 bg-gradient-to-l from-brand-primary/20 to-brand-primary flex-grow"></div>
+                    </div>
+                    
+                    <!-- Feature highlights with animated dots -->
+                    <div class="grid grid-cols-2 gap-4 mb-8 bg-black/20 backdrop-filter backdrop-blur-sm p-4 rounded-lg">
+                        <div class="flex items-start space-x-2">
+                            <div class="relative mt-1">
+                                <div class="w-3 h-3 bg-brand-primary rounded-full absolute animate-ping opacity-75"></div>
+                                <div class="w-3 h-3 bg-brand-primary rounded-full relative"></div>
+                            </div>
+                            <p class="text-sm md:text-base text-white">Sustainable Agricultural Solutions</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <div class="relative mt-1">
+                                <div class="w-3 h-3 bg-brand-accent rounded-full absolute animate-ping opacity-75"></div>
+                                <div class="w-3 h-3 bg-brand-accent rounded-full relative"></div>
+                            </div>
+                            <p class="text-sm md:text-base text-white">Eco-friendly Formulations</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <div class="relative mt-1">
+                                <div class="w-3 h-3 bg-brand-secondary rounded-full absolute animate-ping opacity-75"></div>
+                                <div class="w-3 h-3 bg-brand-secondary rounded-full relative"></div>
+                            </div>
+                            <p class="text-sm md:text-base text-white">Improved Crop Yields</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <div class="relative mt-1">
+                                <div class="w-3 h-3 bg-green-500 rounded-full absolute animate-ping opacity-75"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full relative"></div>
+                            </div>
+                            <p class="text-sm md:text-base text-white">Nutrient-rich Soil Support</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-base md:text-xl text-white mb-8 max-w-xl bg-black/20 backdrop-filter backdrop-blur-sm p-4 rounded-lg">
+                        We're committed to revolutionizing agriculture through sustainable and eco-friendly fertilizer solutions. 
+                        Our innovative products enhance soil health, boost crop yields, and promote sustainable farming practices.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="products.html" class="magnetic-button glow-on-hover bg-brand-primary text-white px-6 py-3 rounded-full hover:bg-brand-dark transition-colors shadow hover:shadow-lg transform hover:scale-105 duration-300 flex items-center">
+                            Explore Products
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="contact.html" class="magnetic-button border-2 border-brand-primary text-brand-primary bg-transparent px-6 py-3 rounded-full hover:bg-brand-primary hover:text-white transition-colors flex items-center">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-left">
+                    <div class="relative mx-auto max-w-md lg:max-w-full">
+                        <div class="relative">
+                            <!-- Animated circles background -->
+                            <div class="aspect-square bg-brand-primary/10 rounded-full absolute -inset-2 md:-inset-3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                            <div class="aspect-square bg-brand-secondary/10 rounded-full absolute -inset-4 md:-inset-6 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" style="animation-delay: 0.5s; animation-duration: 3s;"></div>
+                            <div class="aspect-square bg-brand-accent/10 rounded-full absolute -inset-6 md:-inset-9 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" style="animation-delay: 1s; animation-duration: 4s;"></div>
+                            
+                            <!-- Image with hover effect -->
+                            <img src="image/Home/menotre_notice1.png" 
+                                 alt="Sustainable Farming" 
+                                 class="w-full relative z-10 h-80 md:h-96 lg:h-[450px] object-contain object-center transition-all duration-700 hover:scale-105 animate-float">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Area -->
+            <div class="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div class="bg-black/50 backdrop-blur rounded-lg p-4 text-center shadow-md" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-green-400">
+                        <span class="counter" data-target="30">0</span>+
+                    </h3>
+                    <p class="text-sm md:text-base text-white">Product varieties</p>
+                </div>
+                <div class="bg-black/50 backdrop-blur rounded-lg p-4 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl md:text-3xl font-bold text-green-400">
+                        <span class="counter" data-target="10">0</span> k+
+                    </h3>
+                    <p class="text-sm md:text-base text-white">Happy farmers</p>
+                </div>
+                <div class="bg-black/50 backdrop-blur rounded-lg p-4 text-center shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl md:text-3xl font-bold text-green-400">
+                        <span class="counter" data-target="98">0</span>%
+                    </h3>
+                    <p class="text-sm md:text-base text-white">Satisfaction rate</p>
+                </div>
+                <div class="bg-black/50 backdrop-blur rounded-lg p-4 text-center shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl md:text-3xl font-bold text-green-400">
+                        <span class="counter" data-target="35">0</span>%
+                    </h3>
+                    <p class="text-sm md:text-base text-white">Yield increase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- About Section -->
+<section id="about" class="py-20">
+    <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+        <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Mission</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                With years of research and development, we've created products that enhance soil health while 
+                maximizing crop yields and promoting sustainable farming practices.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="900">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Sustainable Agriculture</h3>
+                <p class="text-gray-600 mb-6">
+                    Our team of agricultural scientists works tirelessly to develop fertilizer formulations 
+                    that not only increase yields but also improve long-term soil health and reduce environmental impact.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="text-center p-4 bg-brand-light rounded-lg" data-aos="flip-left" data-aos-delay="300">
+                        <h3 class="text-3xl font-bold text-brand-primary">
+                            <span class="counter" data-target="15">0</span>+
+                        </h3>
+                        <p class="text-gray-700">Years Experience</p>
+                    </div>
+                    <div class="text-center p-4 bg-brand-light rounded-lg" data-aos="flip-right" data-aos-delay="300">
+                        <h3 class="text-3xl font-bold text-brand-primary">
+                            <span class="counter" data-target="50">0</span>k+
+                        </h3>
+                        <p class="text-gray-700">Farmers Served</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000">
+                <!-- Decorative border element behind image -->
+                <div class="absolute -top-4 -left-4 w-full h-full border-4 border-brand-primary rounded-lg z-0"></div>
+                
+                <img src="image/Home/Sustainable_Agriculture.jpg" 
+                     alt="Sustainable Farming Practices" 
+                     class="relative w-full h-full object-cover rounded-lg shadow-lg transform transition-transform duration-1000 hover:scale-105 z-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent z-10"></div>
+                <div class="absolute bottom-4 left-4 text-white" data-aos="fade-up" data-aos-delay="400">
+                    <!-- Text overlay if needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-brand-light/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">Our Premium Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Explore our featured premium fertilizers designed to enhance your crop yield while maintaining soil health.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8" id="featured-products">
+                <!-- Product cards will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section id="gallery-preview" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    See the impact of our fertilizers in action. Browse our gallery of before/after crop photos, production facilities, and application techniques.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="featured-gallery">
+                <!-- Gallery images will be dynamically loaded -->
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="gallery.html" class="bg-brand-primary text-white px-8 py-3 rounded-full hover:bg-brand-dark transition-colors inline-flex items-center glow-on-hover">
+                    <span>View Full Gallery</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-r from-brand-light/30 to-white relative overflow-hidden with-shapes" data-shape-count="5">
+        <!-- Animated background elements -->
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-light rounded-full opacity-40 animate-pulse"></div>
+        <div class="absolute bottom-10 left-10 w-32 h-32 bg-brand-accent rounded-full opacity-30 animate-pulse" style="animation-duration: 3s;"></div>
+        
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-4">
+                <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm font-semibold">Success Stories</span>
+            </div>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">What Our Customers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Don't just take our word for it. Hear from farmers who have transformed their crops and increased their yields with GrowRich fertilizers.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Testimonial Card -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:shadow-2xl" data-aos="zoom-in">
+                    <div class="p-8 md:p-10 relative">
+                        <!-- Quote icon -->
+                        <div class="absolute top-4 right-4 text-brand-light">
+                            <svg class="w-20 h-20 opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary flex items-center justify-center text-white text-2xl font-bold mr-4 shadow-md">
+                                <span id="testimonial-initials"></span>
+                            </div>
+                            <div>
+                                <h4 id="testimonial-name" class="font-bold text-gray-800 text-xl"><!-- Name will be added dynamically --></h4>
+                                <div class="text-sm text-gray-500 flex flex-wrap">
+                                    <span id="testimonial-occupation" class="font-medium"><!-- Occupation will be added dynamically --></span>
+                                    <span class="mx-2 text-gray-300">•</span>
+                                    <span id="testimonial-location" class="text-gray-500"><!-- Location will be added dynamically --></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="testimonial-stars" class="flex mb-6 text-yellow-400">
+                            <!-- Stars will be added dynamically -->
+                        </div>
+                        
+                        <blockquote id="testimonial-text" class="text-gray-700 text-lg leading-relaxed italic mb-8">
+                            <!-- Testimonial text will be added dynamically -->
+                        </blockquote>
+                        
+                        <div class="flex items-center mt-6">
+                            <div class="inline-block px-3 py-1 bg-brand-light/30 text-brand-primary rounded-full text-sm font-medium">
+                                <span id="testimonial-crop-type" class="font-bold"><!-- Crop type will be added dynamically --></span> Farmer
+                            </div>
+                            <div class="inline-block ml-4 px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">
+                                <span id="testimonial-date"><!-- Date will be added dynamically --></span>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            
+                <!-- Testimonial Navigation -->
+                <div class="flex justify-between items-center mt-8 px-4">
+                    <button id="prev-testimonial" class="bg-white text-gray-800 p-3 rounded-full shadow-xl hover:bg-brand-primary hover:text-white transition-all duration-300 transform hover:scale-110 focus:outline-none group">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        </button>
+                    
+                    <!-- Testimonial Indicators -->
+                    <div id="testimonial-indicators" class="flex space-x-3">
+                        <!-- Indicators will be added dynamically -->
+                    </div>
+                    
+                    <button id="next-testimonial" class="bg-white text-gray-800 p-3 rounded-full shadow-xl hover:bg-brand-primary hover:text-white transition-all duration-300 transform hover:scale-110 focus:outline-none group">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="add-testimonial.html" class="bg-brand-primary text-white px-8 py-3 rounded-full hover:bg-brand-dark transition-colors inline-flex items-center transform hover:scale-105 duration-300 shadow-md glow-on-hover">
+                    <span>Share Your Experience</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-white to-brand-light/30 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-primary rounded-full opacity-5 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-secondary rounded-full opacity-5 transform translate-x-1/3 translate-y-1/3"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Let's Grow Together</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Have questions about our products or need expert advice? Our team of agricultural specialists is ready to help you achieve better yields naturally.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-8" data-aos="zoom-in">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Contact Info</h3>
+                        
+                        <!-- Email -->
+                        <div class="flex items-center">
+                            <div class="bg-[#f2f5f2] p-3 rounded-full mr-4 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                        <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@fertilizer.map</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="flex items-center">
+                            <div class="bg-[#f2f5f2] p-3 rounded-full mr-4 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                        </div>
+                        <div>
+                                <h4 class="font-bold text-gray-800">Location</h4>
+                                <p class="text-gray-600">123 Farming Street<br>Agriculture Park, CA 95814</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="flex items-center">
+                            <div class="bg-[#f2f5f2] p-3 rounded-full mr-4 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                        </div>
+                        <div>
+                                <h4 class="font-bold text-gray-800">Business Hours</h4>
+                                <p class="text-gray-600">Mon-Fri: 9am - 5pm<br>Sat: 10am - 2pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary">
+                            </div>
+                            <div class="mb-4">
+                                <textarea rows="3" placeholder="Your Message" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-primary text-white py-2 px-4 rounded-lg hover:bg-brand-dark transition-colors">Send Message</button>
+                    </form>
+                    </div>
+                </div>
+                
+                <!-- Social Connect -->
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/fertilizer.map" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">fertilizer.map</h3>
+                    <p class="text-gray-400">Growing better crops, naturally.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white">Home</a></li>
+                        <li><a href="#about" class="hover:text-white">About</a></li>
+                        <li><a href="#products" class="hover:text-white">Products</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@fertilizer.map</li>
+                        <li>+1 234 567 890</li>
+                        <li>123 Farming Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/fertilizer.map" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 fertilizer.map. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts at the end of the body -->
+    <script src="js/main.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/data/gallery.js"></script>
+    <script src="js/data/testimonials.js"></script>
+    
+    <!-- Counter Animation Script -->
+    <script>
+        // Initialize number counters
+        function initCounters() {
+            // Add counter animation CSS
+            const counterStyle = document.createElement('style');
+            counterStyle.textContent = `
+                @keyframes counterPulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                    100% { transform: scale(1); }
+                }
+                
+                .counter-finished {
+                    animation: counterPulse 0.5s ease-in-out;
+                    color: currentColor;
+                    transition: color 0.3s ease;
+                }
+                
+                .counter {
+                    display: inline-block;
+                    position: relative;
+                }
+                
+                .counter::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: currentColor;
+                    transition: width 2s ease-in-out;
+                }
+                
+                .counter.animated::after {
+                    width: 100%;
+                }
+            `;
+            document.head.appendChild(counterStyle);
+            
+            // Create an Intersection Observer for the counters
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // When counter elements come into view
+                    if (entry.isIntersecting) {
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            // Only animate if not already animated
+                            if (!counter.classList.contains('animated')) {
+                                const target = parseInt(counter.getAttribute('data-target'));
+                                const duration = 2000; // animation duration in ms
+                                const startTime = Date.now();
+                                
+                                // Mark as animated to prevent re-animation
+                                counter.classList.add('animated');
+                                
+                                const updateCounter = () => {
+                                    const currentTime = Date.now();
+                                    const elapsedTime = currentTime - startTime;
+                                    
+                                    if (elapsedTime < duration) {
+                                        // Calculate the progress (0 to 1)
+                                        const progress = elapsedTime / duration;
+                                        
+                                        // Use easeOutQuad easing function for smoother animation
+                                        const easedProgress = 1 - Math.pow(1 - progress, 2);
+                                        
+                                        // Calculate the current count
+                                        const currentCount = Math.floor(easedProgress * target);
+                                        
+                                        // Update the counter text
+                                        counter.textContent = currentCount;
+                                        
+                                        // Continue animation
+                                        requestAnimationFrame(updateCounter);
+                                    } else {
+                                        // Ensure final value is exact
+                                        counter.textContent = target;
+                                        
+                                        // Add finished animation class
+                                        counter.classList.add('counter-finished');
+                                    }
+                                };
+                                
+                                // Start the animation
+                                requestAnimationFrame(updateCounter);
+                            }
+                        });
+                        
+                        // Stop observing this element after animation starts
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            // Observe all counter containers
+            document.querySelectorAll('.counter').forEach(counter => {
+                // Find parent element to observe (the stat box)
+                const container = counter.closest('[data-aos]');
+                if (container) {
+                    counterObserver.observe(container);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize counters
+            initCounters();
+        });
+    </script>
+    
+    <script>
+        // Function to load featured products
+        function loadFeaturedProducts() {
+            const featuredProducts = productsData.filter(product => product.featured).slice(0, 3);
+            const productContainer = document.getElementById('featured-products');
+            
+            featuredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white rounded-xl shadow-lg overflow-hidden';
+                productCard.setAttribute('data-aos', 'fade-up');
+                
+                productCard.innerHTML = `
+                    <div class="h-48 overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform hover:scale-110 duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${product.name}</h3>
+                        <p class="text-gray-600">${product.shortDescription || product.description}</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-brand-primary font-bold">Contact for pricing</span>
+                            <div class="flex items-center">
+                                ${createStarRating(product.rating)}
+                            </div>
+                        </div>
+                        <a href="product-details.html?product=${product.id}" class="mt-4 text-brand-primary font-semibold hover:text-brand-dark inline-block">
+                            Learn More →
+                        </a>
+                    </div>
+                `;
+                
+                productContainer.appendChild(productCard);
+            });
+        }
+        
+        // Function to load gallery images
+        function loadGalleryImages() {
+            // Get 3 random featured images from the gallery data
+            const galleryImages = [...galleryData]
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+                
+            const galleryContainer = document.getElementById('featured-gallery');
+            
+            galleryImages.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl';
+                galleryItem.setAttribute('data-aos', 'fade-up');
+                galleryItem.setAttribute('data-aos-delay', index * 100);
+                
+                galleryItem.innerHTML = `
+                    <img src="${image.fullImage}" alt="${image.title}" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg text-gray-800">${image.title}</h3>
+                        <p class="text-sm text-gray-600">${image.description}</p>
+                    </div>
+                `;
+                
+                galleryContainer.appendChild(galleryItem);
+            });
+        }
+        
+        // Create star rating HTML
+        function createStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+                } else {
+                    stars += '<svg class="w-4 h-4 text-gray-300 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+                }
+            }
+            return stars;
+        }
+        
+        // Load products and gallery images when the page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+            loadGalleryImages();
+        });
+
+        // Testimonials Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure testimonials data exists
+            console.log("Testimonials data loaded:", testimonialsData);
+            
+            // Check if testimonials array is empty or undefined
+            if (!testimonialsData || testimonialsData.length === 0) {
+                console.error("No testimonial data found!");
+                // Fallback to static testimonial if needed
+                testimonialsData = [{
+                    id: 'testimonial-fallback',
+                    name: 'John Farmer',
+                    occupation: 'Farm Owner',
+                    location: 'Midwest, USA',
+                    rating: 5,
+                    text: 'Great fertilizer products that have helped my crops grow healthier and stronger. Highly recommended for all farmers.',
+                    cropType: 'Mixed Crops',
+                    date: '2023-12-01'
+                }];
+            }
+            
+            // Initialize testimonials
+            let currentTestimonialIndex = 0;
+            
+            // Function to generate initials from name
+            function getInitials(name) {
+                return name.split(' ')
+                    .map(word => word.charAt(0))
+                    .join('')
+                    .toUpperCase();
+            }
+            
+            // Function to format date
+            function formatDate(dateString) {
+                const options = { year: 'numeric', month: 'short' };
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', options);
+            }
+            
+            // Function to show testimonial by index
+            function showTestimonial(index) {
+                const testimonial = testimonialsData[index];
+                
+                // Update text content
+                document.getElementById('testimonial-text').textContent = testimonial.text;
+                document.getElementById('testimonial-name').textContent = testimonial.name;
+                document.getElementById('testimonial-occupation').textContent = testimonial.occupation;
+                document.getElementById('testimonial-location').textContent = testimonial.location;
+                document.getElementById('testimonial-crop-type').textContent = testimonial.cropType;
+                document.getElementById('testimonial-date').textContent = formatDate(testimonial.date);
+                
+                // Set user initials in the avatar
+                document.getElementById('testimonial-initials').textContent = getInitials(testimonial.name);
+                
+                // Update stars - with new animated approach
+                const starsContainer = document.getElementById('testimonial-stars');
+                starsContainer.innerHTML = '';
+                
+                for (let i = 0; i < 5; i++) {
+                    const starWrapper = document.createElement('div');
+                    starWrapper.classList.add('transform', 'transition-all', 'duration-300');
+                    
+                    // Add a small delay for each star's animation
+                    starWrapper.style.animationDelay = `${i * 0.1}s`;
+                    
+                    const starSvg = document.createElement('svg');
+                    starSvg.classList.add('w-6', 'h-6', 'mx-0.5');
+                    starSvg.setAttribute('fill', 'currentColor');
+                    starSvg.setAttribute('viewBox', '0 0 20 20');
+                    
+                    const starPath = document.createElement('path');
+                    starPath.setAttribute('d', 'M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.828 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z');
+                    
+                    starSvg.appendChild(starPath);
+                    
+                    // Apply appropriate color and animation based on rating
+                    if (i < testimonial.rating) {
+                        starSvg.classList.add('text-yellow-400');
+                        // Add a pop-in animation with different delays
+                        starWrapper.classList.add('animate-bounce');
+                        starWrapper.style.animationDuration = '0.5s';
+                        starWrapper.style.animationDelay = `${i * 0.1}s`;
+                    } else {
+                        starSvg.classList.add('text-gray-300');
+                    }
+                    
+                    starWrapper.appendChild(starSvg);
+                    starsContainer.appendChild(starWrapper);
+                }
+                
+                // Update indicators
+                const indicators = document.querySelectorAll('.testimonial-indicator');
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.remove('bg-gray-300');
+                        indicator.classList.remove('w-3');
+                        indicator.classList.add('bg-brand-primary');
+                        indicator.classList.add('w-8');
+                    } else {
+                        indicator.classList.remove('bg-brand-primary');
+                        indicator.classList.remove('w-8');
+                        indicator.classList.add('bg-gray-300');
+                        indicator.classList.add('w-3');
+                    }
+                });
+                
+                currentTestimonialIndex = index;
+                
+                // Apply a fade-in animation to the entire testimonial
+                const testimonialCard = document.querySelector('.bg-white.rounded-2xl');
+                testimonialCard.classList.add('animate-fade-in');
+                
+                // Remove the animation class after it finishes to allow it to be re-applied
+                setTimeout(() => {
+                    testimonialCard.classList.remove('animate-fade-in');
+                }, 1000);
+            }
+            
+            // Create indicators
+            const indicatorsContainer = document.getElementById('testimonial-indicators');
+            testimonialsData.forEach((_, index) => {
+                const indicator = document.createElement('button');
+                indicator.classList.add('h-3', 'rounded-full', 'testimonial-indicator', 'transition-all', 'duration-300');
+                if (index === 0) {
+                    indicator.classList.add('bg-brand-primary');
+                    indicator.classList.add('w-8');
+                } else {
+                    indicator.classList.add('bg-gray-300');
+                    indicator.classList.add('w-3');
+                }
+                indicator.addEventListener('click', () => showTestimonial(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+            
+            // Add event listeners for navigation
+            document.getElementById('prev-testimonial').addEventListener('click', () => {
+                let newIndex = currentTestimonialIndex - 1;
+                if (newIndex < 0) newIndex = testimonialsData.length - 1;
+                showTestimonial(newIndex);
+            });
+            
+            document.getElementById('next-testimonial').addEventListener('click', () => {
+                let newIndex = currentTestimonialIndex + 1;
+                if (newIndex >= testimonialsData.length) newIndex = 0;
+                showTestimonial(newIndex);
+            });
+            
+            // Auto-rotate testimonials every 8 seconds
+            let testimonialInterval = setInterval(() => {
+                let newIndex = currentTestimonialIndex + 1;
+                if (newIndex >= testimonialsData.length) newIndex = 0;
+                showTestimonial(newIndex);
+            }, 8000);
+            
+            // Stop auto-rotation when user interacts with testimonials
+            document.querySelectorAll('#prev-testimonial, #next-testimonial, .testimonial-indicator').forEach(el => {
+                el.addEventListener('click', () => {
+                    clearInterval(testimonialInterval);
+                });
+            });
+            
+            // Initialize with first testimonial
+            showTestimonial(0);
+            
+            // Add fade-in animation to CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                    animation: fadeIn 0.5s ease-out forwards;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+
+    <style>
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    </style>
+
+    <!-- Background Video Handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the background video element
+            const bgVideo = document.querySelector('.absolute.min-w-full.min-h-full');
+            
+            if (bgVideo) {
+                // Handle video loading errors
+                bgVideo.addEventListener('error', function() {
+                    console.error('Background video failed to load');
+                    // Make sure the fallback background is visible
+                    document.querySelector('.absolute.inset-0.bg-gradient-to-r').style.opacity = '1';
+                });
+                
+                // Improve performance by pausing video when not in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            bgVideo.play().catch(e => console.log('Could not autoplay: ', e));
+                        } else {
+                            bgVideo.pause();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                observer.observe(bgVideo);
+                
+                // Handle mobile devices differently - they often block autoplay
+                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                    // Lower resolution/quality for mobile
+                    bgVideo.setAttribute('playsinline', '');
+                    
+                    // Add poster image for better mobile experience
+                    bgVideo.setAttribute('poster', 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&h=980&q=80');
+                    
+                    // Try to play on user interaction
+                    document.addEventListener('touchstart', () => {
+                        bgVideo.play().catch(e => console.log('Could not autoplay on touch: ', e));
+                    }, { once: true });
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

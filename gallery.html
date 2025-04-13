@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gallery - fertilizer.map</title>
+    <meta name="description" content="Browse our gallery of before/after crop photos, production facilities, and application techniques">
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <script src="js/tailwind-config.js"></script>
+    <script src="js/modern-effects.js" defer></script>
+</head>
+<body class="font-sans antialiased">
+   <!-- Navbar -->
+   <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-bold text-brand-primary flex items-center">
+                <span class="mr-2">🌱</span> fertilizer.map
+            </a>
+            
+            <!-- Navigation Links - Desktop -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Home</a>
+                <a href="products.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Products</a>
+                <a href="gallery.html" class="text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-brand-primary">Gallery</a>
+                <a href="blog.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Blog</a>
+                <!-- <a href="add-testimonial.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Add Testimonial</a> -->
+                <a href="contact.html" class="bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-colors shadow-sm hover:shadow-md ml-2">Contact Us</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-primary/50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" aria-hidden="true" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0">
+            <div class="py-3 space-y-3 border-t border-gray-200">
+                <a href="index.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                <a href="products.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Products</a>
+                <a href="gallery.html" class="block py-2 px-4 text-brand-primary font-medium bg-gray-50 rounded-md transition-colors">Gallery</a>
+                <a href="blog.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Blog</a>
+                <!-- <a href="add-testimonial.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Add Testimonial</a> -->
+                <a href="contact.html" class="block py-2 px-4 text-brand-primary hover:text-white hover:bg-brand-primary rounded-md transition-colors mt-2 border border-brand-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Gallery Hero Section -->
+    <section data-aos="fade-up" class="pt-32 md:pt-40 pb-16 bg-brand-light relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute -top-10 -left-10 w-40 h-40 md:w-60 md:h-60 bg-brand-secondary rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute top-20 right-10 w-24 h-24 md:w-36 md:h-36 bg-brand-primary rounded-full opacity-10 animate-ping" style="animation-duration: 3s;"></div>
+        <div class="absolute bottom-10 left-1/4 w-32 h-32 md:w-48 md:h-48 bg-brand-accent rounded-full opacity-15 animate-pulse" style="animation-duration: 4s;"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6" data-aos="fade-up">Gallery</h1>
+                    <p class="text-base md:text-lg text-gray-600 max-w-xl" data-aos="fade-up" data-aos-delay="100">
+                        See the impact of our fertilizers in action. Browse our gallery of before/after crop photos, production facilities, and application techniques.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-sm">
+                        <div class="grid grid-cols-2 gap-3 transform rotate-3">
+                            <div class="overflow-hidden rounded-lg shadow-md">
+                                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2" 
+                                     alt="Young seedlings in pots" 
+                                     class="w-full h-32 md:h-40 object-cover">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-md">
+                                <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6" 
+                                     alt="Fresh strawberries in baskets" 
+                                     class="w-full h-32 md:h-40 object-cover">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-md mt-3">
+                                <img src="https://images.unsplash.com/photo-1471194402529-8e0f5a675de6" 
+                                     alt="Corn field growing tall" 
+                                     class="w-full h-32 md:h-40 object-cover">
+                            </div>
+                            <div class="overflow-hidden rounded-lg shadow-md mt-3">
+                                <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea" 
+                                     alt="Child watering plants" 
+                                     class="w-full h-32 md:h-40 object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-lg p-3 shadow-lg z-20">
+                            <div class="flex items-center gap-2">
+                                <div class="bg-green-100 rounded-full p-2">
+                                    <svg class="w-5 h-5 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <p class="font-medium text-sm">Real Results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Tabs -->
+    <section data-aos="fade-up" class="py-6 border-b bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Search Box -->
+            <div class="relative w-full mb-4">
+                <input type="text" id="gallery-search" placeholder="Search gallery..." class="pl-10 pr-4 py-2 rounded-full border-2 border-gray-300 focus:border-brand-primary focus:outline-none w-full">
+                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            
+            <!-- Filter Buttons Container -->
+            <div class="w-full overflow-x-auto scrollbar-hide" data-aos="fade-up">
+                <!-- Inner container for filter buttons with proper spacing -->
+                <div class="flex py-2 px-1 gap-3 min-w-max justify-start md:justify-center">
+                    <button class="gallery-filter active px-4 py-2 text-sm rounded-full border-2 border-brand-primary text-brand-primary bg-white hover:bg-brand-primary hover:text-white transition-colors whitespace-nowrap" data-category="all">
+                        All Photos
+                    </button>
+                    <button class="gallery-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors whitespace-nowrap" data-category="before-after">
+                        Before/After Results
+                    </button>
+                    <button class="gallery-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors whitespace-nowrap" data-category="facilities">
+                        Our Facilities
+                    </button>
+                    <button class="gallery-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors whitespace-nowrap" data-category="application">
+                        Application Techniques
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Custom scroll indicator for touch devices */
+        @media (max-width: 768px) {
+            .scrollbar-hide:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 2px;
+                background: linear-gradient(90deg, rgba(28, 148, 68, 0.1), rgba(28, 148, 68, 0.3));
+                border-radius: 2px;
+                opacity: 0.5;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Gallery Grid -->
+    <section data-aos="fade-up" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gallery-container">
+                <!-- Gallery Item 1 - Seedlings -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="before-after" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2" alt="Young seedlings in pots" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Seedling Growth</h3>
+                        <p class="text-gray-600">Young tomato seedlings thriving with our organic fertilizer blend.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 - Strawberries -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="before-after" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6" alt="Fresh strawberries in baskets" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Strawberry Harvest</h3>
+                        <p class="text-gray-600">Increased yield after application of our specialized berry fertilizer.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 - Corn -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="before-after" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1471194402529-8e0f5a675de6" alt="Corn field growing tall" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Corn Field Development</h3>
+                        <p class="text-gray-600">Healthy corn stalks showing remarkable growth with our NPK formula.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 - Child watering -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="application" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea" alt="Child watering plants" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Safe Family Application</h3>
+                        <p class="text-gray-600">Our eco-friendly fertilizers are safe for the whole family to handle.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 - Warehouse -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="facilities" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Modern warehouse with stacked products" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">State-of-the-Art Warehouse</h3>
+                        <p class="text-gray-600">Our climate-controlled storage facility ensures product quality.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 - Research -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="facilities" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5" alt="Laboratory with equipment" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Research Laboratory</h3>
+                        <p class="text-gray-600">Where innovation happens - our cutting-edge research facilities.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 7 - Drip System -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="application" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e" alt="Drip irrigation system in field" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Drip Irrigation Delivery</h3>
+                        <p class="text-gray-600">Efficient application through modern drip irrigation systems.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 8 - Soil Testing -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="application" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1563514227147-6d2e624f82b8" alt="Soil testing kit and samples" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Soil Analysis</h3>
+                        <p class="text-gray-600">Professional soil testing to determine optimal fertilizer application.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 9 - Packaging -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg" data-category="facilities" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1530049478161-0780526964f4" alt="Packaging line with products" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-lg font-semibold text-gray-800">Eco-Friendly Packaging</h3>
+                        <p class="text-gray-600">Our sustainable packaging line uses recyclable materials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox for image viewing -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged gallery image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">fertilizer.map</h3>
+                    <p class="text-gray-400">Growing better crops, naturally.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white">Products</a></li>
+                        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@fertilizer.map</li>
+                        <li>+1 234 567 890</li>
+                        <li>123 Farming Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 fertilizer.map. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts at the end of the body -->
+    <script src="js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            disable: window.innerWidth < 768 // Disable on mobile for better performance
+        });
+        
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                    const expanded = mobileMenu.classList.contains('open');
+                    mobileMenuBtn.setAttribute('aria-expanded', expanded);
+                    mobileMenu.setAttribute('aria-hidden', !expanded);
+                });
+            }
+        });
+    </script>
+    
+    <!-- Data and Dynamic Loading -->
+    <script src="js/data/gallery.js"></script>
+    <script src="js/gallery-loader.js"></script>
+</body>
+</html> 
+

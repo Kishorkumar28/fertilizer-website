@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Blog - fertilizer.map</title>
+    <meta name="description" content="Latest insights and tips about sustainable agriculture and fertilizers">
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/tailwind-config.js"></script>
+    <script src="js/modern-effects.js" defer></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-brand-primary flex items-center">
+                    <span class="mr-2">🌱</span> fertilizer.map
+                </a>
+                
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Products</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Gallery</a>
+                    <a href="blog.html" class="text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-brand-primary">Blog</a>
+                    <!-- <a href="add-testimonial.html" class="text-gray-700 hover:text-brand-primary font-medium transition-colors px-2 py-1 border-b-2 border-transparent hover:border-brand-primary">Add Testimonial</a> -->
+                    <a href="contact.html" class="bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-colors shadow-sm hover:shadow-md ml-2">Contact Us</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-primary/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" aria-hidden="true" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0">
+                <div class="py-3 space-y-3 border-t border-gray-200">
+                    <a href="index.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                    <a href="products.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Products</a>
+                    <a href="gallery.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Gallery</a>
+                    <a href="blog.html" class="block py-2 px-4 text-brand-primary font-medium bg-gray-50 rounded-md transition-colors">Blog</a>
+                    <!-- <a href="add-testimonial.html" class="block py-2 px-4 text-gray-700 hover:text-brand-primary hover:bg-gray-50 rounded-md transition-colors">Add Testimonial</a> -->
+                    <a href="contact.html" class="block py-2 px-4 text-brand-primary hover:text-white hover:bg-brand-primary rounded-md transition-colors mt-2 border border-brand-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero Section -->
+    <section data-aos="fade-up" class="pt-32 md:pt-40 pb-16 bg-brand-light relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 -left-10 w-40 h-40 md:w-56 md:h-56 bg-brand-secondary rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute -top-10 right-20 w-28 h-28 md:w-40 md:h-40 bg-brand-primary rounded-full opacity-10 animate-ping" style="animation-duration: 4s;"></div>
+        <div class="absolute bottom-5 right-1/4 w-24 h-24 md:w-36 md:h-36 bg-brand-accent rounded-full opacity-20 animate-pulse" style="animation-duration: 3s;"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4" data-aos="fade-up">Our Blog</h1>
+                    <p class="text-base md:text-lg text-gray-600 max-w-xl" data-aos="fade-up" data-aos-delay="100">
+                        Discover the latest insights, tips, and success stories in sustainable agriculture. Stay informed with our expert-written articles.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
+                        <a href="#latest" class="bg-brand-primary text-white px-5 py-2 rounded-full hover:bg-brand-dark transition-colors shadow-sm text-sm md:text-base flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Latest Articles
+                        </a>
+                        <a href="#subscribe" class="border-2 border-brand-primary text-brand-primary px-5 py-2 rounded-full hover:bg-brand-primary hover:text-white transition-colors text-sm md:text-base flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            Subscribe
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <div class="relative">
+                        <!-- Decorative elements -->
+                        <div class="absolute top-0 right-0 w-16 h-16 md:w-20 md:h-20 bg-brand-primary/20 rounded-full -translate-y-1/4 translate-x-1/4"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 md:w-20 md:h-20 bg-brand-accent/20 rounded-full"></div>
+                        
+                        <!-- Blog post card -->
+                        <div class="relative bg-white rounded-xl shadow-lg overflow-hidden max-w-sm">
+                            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                                 alt="Sustainable Farming Practices" 
+                                 class="w-full h-40 md:h-48 object-cover">
+                            <div class="p-4">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-brand-primary/10 text-brand-primary text-xs font-semibold px-2 py-1 rounded-full">Featured</span>
+                                    <span class="text-gray-500 text-xs ml-auto">March 15, 2024</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">The Future of Sustainable Agriculture</h3>
+                                <p class="text-sm text-gray-600 line-clamp-2">Discover how organic fertilizers are revolutionizing modern farming practices while promoting environmental sustainability.</p>
+                                <div class="flex items-center mt-4">
+                                    <img class="h-8 w-8 rounded-full border-2 border-brand-light" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Author">
+                                    <div class="ml-2">
+                                        <p class="text-xs font-medium text-gray-900">Dr. Sarah Johnson</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section data-aos="fade-up" class="py-6 border-b sticky top-20 bg-white z-30 shadow-sm">
+        <div class="container mx-auto px-4">
+            <!-- Search Box -->
+            <div class="relative w-full mb-4">
+                <input type="text" id="blog-search" placeholder="Search articles..." class="pl-10 pr-4 py-2 rounded-full border-2 border-gray-300 focus:border-brand-primary focus:outline-none w-full">
+                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            
+            <!-- Filter Buttons Container -->
+            <div class="w-full overflow-x-auto scrollbar-hide relative" data-aos="fade-up">
+                <!-- Inner container for filter buttons with proper spacing -->
+                <div class="flex py-2 px-1 gap-3 min-w-max">
+                    <button class="blog-category-filter active px-4 py-2 text-sm rounded-full border-2 border-brand-primary text-brand-primary bg-white hover:bg-brand-primary hover:text-white transition-colors flex items-center whitespace-nowrap" data-category="all">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        All Categories
+                    </button>
+                    <button class="blog-category-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors flex items-center whitespace-nowrap" data-category="organic-farming">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                        </svg>
+                        Organic Farming
+                    </button>
+                    <button class="blog-category-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors flex items-center whitespace-nowrap" data-category="soil-health">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Soil Health
+                    </button>
+                    <button class="blog-category-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors flex items-center whitespace-nowrap" data-category="crop-management">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7z" clip-rule="evenodd"></path>
+                        </svg>
+                        Crop Management
+                    </button>
+                    <button class="blog-category-filter px-4 py-2 text-sm rounded-full border-2 border-gray-300 hover:border-brand-primary hover:text-brand-primary transition-colors flex items-center whitespace-nowrap" data-category="sustainable-practices">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"></path>
+                        </svg>
+                        Sustainable Practices
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    /* Hide scrollbar but maintain scroll functionality */
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
+    }
+    
+    /* Custom scroll indicator for touch devices */
+    @media (max-width: 768px) {
+        .scrollbar-hide:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(28, 148, 68, 0.1), rgba(28, 148, 68, 0.3));
+            border-radius: 2px;
+            opacity: 0.5;
+        }
+    }
+    </style>
+
+    <!-- Featured Article -->
+    <section data-aos="fade-up" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center mb-8" data-aos="fade-up">
+                <h2 class="animate-on-scroll" data-animation="fade-in" class="text-3xl font-bold text-gray-800">Featured Article</h2>
+                <div class="h-px bg-gray-300 flex-grow ml-8"></div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden relative group" data-aos="fade-up">
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/80 to-brand-dark/80 opacity-0 group-hover:opacity-75 transition-opacity duration-300 flex items-center justify-center z-10">
+                    <a href="blog-details.html" class="px-6 py-3 bg-white text-brand-primary font-bold rounded-full transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">Read Full Article</a>
+                </div>
+                <div class="md:flex">
+                    <div class="md:w-1/2 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                             alt="Sustainable Farming Practices" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-brand-primary text-white px-4 py-1 rounded-full text-sm font-bold">
+                            Featured
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="uppercase tracking-wide text-sm text-brand-primary font-semibold flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            Research & Innovation
+                        </div>
+                        <h3 class="mt-2 text-2xl font-semibold text-gray-800 hover:text-brand-primary transition-colors">The Future of Sustainable Agriculture: Organic Fertilizers</h3>
+                        <p class="mt-4 text-gray-600">
+                            Discover how organic fertilizers are revolutionizing modern farming practices while promoting environmental sustainability and soil health. Our research shows a 35% increase in crop yield when using properly formulated organic fertilizers versus conventional methods.
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <img class="h-10 w-10 rounded-full border-2 border-brand-light" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Author">
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Dr. Sarah Johnson</p>
+                                <p class="text-sm text-gray-500">March 15, 2024 • 8 min read</p>
+                            </div>
+                            <div class="ml-auto flex space-x-3">
+                                <span class="text-gray-500 flex items-center text-sm">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    1.5k
+                                </span>
+                                <span class="text-gray-500 flex items-center text-sm">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    24
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="blog-details.html" class="inline-block bg-brand-primary text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-colors transform hover:translate-x-2 duration-300 flex items-center">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section data-aos="fade-up" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center mb-8" data-aos="fade-up">
+                <h2 class="animate-on-scroll" data-animation="fade-in" class="text-3xl font-bold text-gray-800">Recent Articles</h2>
+                <div class="h-px bg-gray-300 flex-grow ml-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="blog-article bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-category="soil-health">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                             alt="Soil Health" 
+                             class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 left-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">Soil Science</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors">Understanding Soil Health Indicators</h3>
+                        <p class="text-gray-600 mb-4">Learn about key indicators that help determine your soil's health and fertility status. Discover why organic matter and microbial activity are crucial for sustainable farming.</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-sm text-gray-500 flex items-center">
+                                    <svg class="w-4 h-4 mr-1 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    March 10, 2024
+                                </span>
+                            </div>
+                            <a href="blog-details.html" class="text-brand-primary hover:text-brand-dark transition-colors flex items-center text-sm font-medium">
+                                Read More 
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-article bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="100" data-category="sustainable-practices">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                             alt="Crop Rotation" 
+                             class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 left-3 bg-green-400 text-green-900 text-xs font-bold px-2 py-1 rounded">Sustainable Farming</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors">Benefits of Crop Rotation</h3>
+                        <p class="text-gray-600 mb-4">Explore how rotating crops can improve soil fertility and reduce pest problems naturally. Our case studies show up to 40% reduction in pest damage with proper rotation strategies.</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-sm text-gray-500 flex items-center">
+                                    <svg class="w-4 h-4 mr-1 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    March 5, 2024
+                                </span>
+                            </div>
+                            <a href="blog-details.html" class="text-brand-primary hover:text-brand-dark transition-colors flex items-center text-sm font-medium">
+                                Read More 
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-article bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="200" data-category="crop-management">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1474557157379-8aa74a6ef541?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                             alt="Water Management" 
+                             class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 left-3 bg-blue-400 text-blue-900 text-xs font-bold px-2 py-1 rounded">Water Conservation</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-brand-primary transition-colors">Smart Water Management Tips</h3>
+                        <p class="text-gray-600 mb-4">Discover effective strategies for water conservation in agricultural practices. Implement these techniques to reduce water usage by up to 30% while improving crop health.</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-sm text-gray-500 flex items-center">
+                                    <svg class="w-4 h-4 mr-1 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    March 1, 2024
+                                </span>
+                            </div>
+                            <a href="blog-details.html" class="text-brand-primary hover:text-brand-dark transition-colors flex items-center text-sm font-medium">
+                                Read More 
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="mt-16 bg-brand-primary bg-opacity-10 rounded-xl p-8 relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand-primary rounded-full opacity-10"></div>
+                <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-brand-primary rounded-full opacity-10"></div>
+                
+                <div class="relative z-10">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Get Fresh Content Delivered</h3>
+                        <p class="text-gray-600 mb-6">Subscribe to our newsletter to receive the latest articles, farming tips, and exclusive offers right to your inbox.</p>
+                        
+                        <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary">
+                            <button class="magnetic-button glow-on-hover bg-brand-primary text-white px-6 py-3 rounded-lg hover:bg-brand-dark transition-colors transform hover:scale-105 duration-300">
+                                Subscribe
+                            </button>
+                        </form>
+                        <p class="text-xs text-gray-500 mt-3">We respect your privacy. Unsubscribe at any time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="magnetic-button glow-on-hover bg-white border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white font-bold px-8 py-3 rounded-full transition-colors duration-300 flex items-center mx-auto">
+                    Load More Articles
+                    <svg class="w-5 h-5 ml-2 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">fertilizer.map</h3>
+                    <p class="text-gray-400">Growing better crops, naturally.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white">Products</a></li>
+                        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@fertilizer.map</li>
+                        <li>+1 234 567 890</li>
+                        <li>123 Farming Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/fertilizer.map" class="instagram-btn" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                            Follow on Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 fertilizer.map. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html> 
+

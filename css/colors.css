@@ -1,0 +1,140 @@
+/* Colors CSS - Standardized color scheme for fertilizer.map website */
+
+:root {
+  /* Primary Brand Colors */
+  --brand-primary: #1c9444;     /* Main brand color - green */
+  --brand-dark: #14643c;        /* Darker green for hover states */
+  --brand-light: #cbdfd4;       /* Light green for backgrounds */
+  --brand-secondary: #699d80;   /* Secondary brand color */
+  --brand-accent: #82b99c;      /* Accent color */
+  
+  /* Neutral Colors */
+  --neutral-100: #ffffff;       /* White */
+  --neutral-200: #f9fafb;       /* Off white */
+  --neutral-300: #f3f4f6;       /* Light gray */
+  --neutral-400: #e5e7eb;       /* Mid-light gray */
+  --neutral-500: #d1d5db;       /* Medium gray */
+  --neutral-600: #9ca3af;       /* Mid-dark gray */
+  --neutral-700: #6b7280;       /* Dark gray */
+  --neutral-800: #374151;       /* Darker gray */
+  --neutral-900: #1f2937;       /* Almost black */
+  --neutral-950: #111827;       /* Black-ish */
+  
+  /* Accent Colors */
+  --accent-yellow: #f59e0b;     /* For highlights, warnings */
+  --accent-yellow-light: #fef3c7; /* Light yellow background */
+  
+  /* Feedback Colors */
+  --success: #10b981;           /* Success messages */
+  --success-light: #d1fae5;     /* Light success background */
+  --error: #ef4444;             /* Error messages */
+  --error-light: #fee2e2;       /* Light error background */
+  --info: #3b82f6;              /* Information messages */
+  --info-light: #dbeafe;        /* Light info background */
+  --warning: #f59e0b;           /* Warning messages */
+  --warning-light: #fef3c7;     /* Light warning background */
+  
+  /* Text Colors */
+  --text-primary: #1f2937;      /* Primary text color */
+  --text-secondary: #6b7280;    /* Secondary text color */
+  --text-tertiary: #9ca3af;     /* Tertiary text color */
+  --text-light: #f3f4f6;        /* Light text color (on dark backgrounds) */
+  
+  /* Special Effects */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+  --gradient-dark: linear-gradient(135deg, var(--brand-dark), var(--brand-primary));
+  --gradient-light: linear-gradient(135deg, var(--brand-light), var(--neutral-200));
+}
+
+/* Background Colors */
+.bg-primary { background-color: var(--brand-primary); }
+.bg-dark { background-color: var(--brand-dark); }
+.bg-light { background-color: var(--brand-light); }
+.bg-secondary { background-color: var(--brand-secondary); }
+.bg-accent { background-color: var(--brand-accent); }
+.bg-white { background-color: var(--neutral-100); }
+.bg-gray-50 { background-color: var(--neutral-200); }
+.bg-gray-100 { background-color: var(--neutral-300); }
+.bg-gray-200 { background-color: var(--neutral-400); }
+.bg-gray-300 { background-color: var(--neutral-500); }
+.bg-gray-400 { background-color: var(--neutral-600); }
+.bg-gray-500 { background-color: var(--neutral-700); }
+.bg-gray-600 { background-color: var(--neutral-800); }
+.bg-gray-700 { background-color: var(--neutral-900); }
+.bg-gray-800 { background-color: var(--neutral-950); }
+
+/* Text Colors */
+.text-primary { color: var(--brand-primary); }
+.text-dark { color: var(--brand-dark); }
+.text-light { color: var(--brand-light); }
+.text-secondary { color: var(--brand-secondary); }
+.text-accent { color: var(--brand-accent); }
+.text-black { color: var(--neutral-950); }
+.text-gray-900 { color: var(--neutral-900); }
+.text-gray-800 { color: var(--neutral-800); }
+.text-gray-700 { color: var(--neutral-700); }
+.text-gray-600 { color: var(--neutral-600); }
+.text-gray-500 { color: var(--neutral-500); }
+.text-white { color: var(--neutral-100); }
+
+/* Border Colors */
+.border-primary { border-color: var(--brand-primary); }
+.border-dark { border-color: var(--brand-dark); }
+.border-light { border-color: var(--brand-light); }
+.border-secondary { border-color: var(--brand-secondary); }
+.border-accent { border-color: var(--brand-accent); }
+.border-gray-100 { border-color: var(--neutral-300); }
+.border-gray-200 { border-color: var(--neutral-400); }
+.border-gray-300 { border-color: var(--neutral-500); }
+.border-gray-400 { border-color: var(--neutral-600); }
+.border-gray-500 { border-color: var(--neutral-700); }
+.border-gray-800 { border-color: var(--neutral-950); }
+
+/* Gradients */
+.bg-gradient-primary { background-image: var(--gradient-primary); }
+.bg-gradient-dark { background-image: var(--gradient-dark); }
+.bg-gradient-light { background-image: var(--gradient-light); }
+
+/* Hover Effects */
+.hover-bg-primary:hover { background-color: var(--brand-primary); }
+.hover-bg-dark:hover { background-color: var(--brand-dark); }
+.hover-text-primary:hover { color: var(--brand-primary); }
+.hover-text-dark:hover { color: var(--brand-dark); }
+.hover-text-white:hover { color: var(--neutral-100); }
+
+/* Focus States */
+.focus-ring-primary:focus { box-shadow: 0 0 0 3px rgba(28, 148, 68, 0.5); }
+
+/* Shadows */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* Status Colors */
+.bg-success { background-color: var(--success); }
+.bg-success-light { background-color: var(--success-light); }
+.bg-error { background-color: var(--error); }
+.bg-error-light { background-color: var(--error-light); }
+.bg-info { background-color: var(--info); }
+.bg-info-light { background-color: var(--info-light); }
+.bg-warning { background-color: var(--warning); }
+.bg-warning-light { background-color: var(--warning-light); }
+
+.text-success { color: var(--success); }
+.text-error { color: var(--error); }
+.text-info { color: var(--info); }
+.text-warning { color: var(--warning); }
+
+/* Default brand colors for TailwindCSS */
+:root {
+  --tw-brand-primary: 28, 148, 68;
+  --tw-brand-dark: 20, 100, 60;
+  --tw-brand-light: 203, 223, 212;
+  --tw-brand-secondary: 105, 157, 128;
+  --tw-brand-accent: 130, 185, 156;
+} 

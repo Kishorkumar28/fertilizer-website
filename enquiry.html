@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Product Enquiry - fertilizer.map</title>
+    <meta name="description" content="Submit your enquiry about our organic fertilizer products">
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-light': '#cbdfd4',
+                        'brand-primary': '#1c9444',
+                        'brand-dark': '#14643c',
+                        'brand-secondary': '#699d80',
+                        'brand-accent': '#82b99c'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensure container is consistent across all pages */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/modern-effects.js" defer></script>
+    <link rel="stylesheet" href="css/colors.css">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Back Button -->
+                <a href="products.html" class="flex items-center text-brand-primary hover:text-brand-dark transition-colors">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="font-medium">Back to Products</span>
+                </a>
+                
+                <!-- Logo -->
+                <a href="products.html" class="text-2xl font-bold text-brand-primary flex items-center">
+                    <span class="mr-2">🌱</span> fertilizer.map
+                </a>
+                
+                <!-- Spacer to maintain centering of logo -->
+                <div class="w-24"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enquiry Hero Section -->
+    <section data-aos="fade-up" class="pt-32 pb-12 bg-brand-light relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-secondary rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute top-20 right-10 w-20 h-20 bg-brand-primary rounded-full opacity-10 animate-ping" style="animation-duration: 3s;"></div>
+        <div class="absolute bottom-10 left-1/4 w-32 h-32 bg-brand-accent rounded-full opacity-15 animate-pulse" style="animation-duration: 4s;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6" data-aos="fade-up">Product Enquiry</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl" data-aos="fade-up" data-aos-delay="100">
+                Submit your enquiry about our organic fertilizers. We'll get back to you with detailed information.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex items-center text-gray-600">
+                    <svg class="w-5 h-5 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Quick Response Within 24 Hours</span>
+                </div>
+                <div class="flex items-center text-gray-600">
+                    <svg class="w-5 h-5 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Expert Agricultural Advice</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section data-aos="fade-up" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Product Information -->
+                <div data-aos="fade-right">
+                    <div id="product-info" class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-brand-primary transition-transform duration-300 hover:scale-105 relative">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="inline-block mr-3 p-2 bg-brand-light rounded-full">
+                                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </span>
+                            <span id="product-title">Product Information</span>
+                        </h2>
+                        
+                        <div id="product-details" class="mb-6 space-y-4">
+                            <div class="animate-pulse bg-gray-200 h-6 w-3/4 rounded"></div>
+                            <div class="animate-pulse bg-gray-200 h-6 w-1/2 rounded"></div>
+                            <div class="animate-pulse bg-gray-200 h-6 w-2/3 rounded"></div>
+                            <div class="animate-pulse bg-gray-200 h-6 w-1/2 rounded"></div>
+                        </div>
+                        
+                        <div id="product-image" class="mb-6">
+                            <div class="animate-pulse bg-gray-200 h-48 w-full rounded-lg"></div>
+                        </div>
+                        
+                        <div class="text-sm text-gray-600 italic">
+                            Complete the form to enquire about this product.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enquiry Form -->
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Submit Your Enquiry</h2>
+                        
+                        <form id="enquiry-form" class="space-y-6">
+                            <input type="hidden" id="product-id" name="product-id" value="">
+                            
+                            <!-- Personal Information -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-brand-primary">Your Information</h3>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name*</label>
+                                        <input type="text" id="first-name" name="first-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name*</label>
+                                        <input type="text" id="last-name" name="last-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary">
+                                </div>
+                            </div>
+                            
+                            <!-- Enquiry Details -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-brand-primary">Enquiry Details</h3>
+                                
+                                <div>
+                                    <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity Interested</label>
+                                    <select id="quantity" name="quantity" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary">
+                                        <option value="">Select quantity range</option>
+                                        <option value="1-10 kg">1-10 kg</option>
+                                        <option value="11-50 kg">11-50 kg</option>
+                                        <option value="51-100 kg">51-100 kg</option>
+                                        <option value="101-500 kg">101-500 kg</option>
+                                        <option value="501+ kg">501+ kg</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="purpose" class="block text-sm font-medium text-gray-700 mb-1">Intended Use</label>
+                                    <select id="purpose" name="purpose" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary">
+                                        <option value="">Select intended use</option>
+                                        <option value="Home Gardening">Home Gardening</option>
+                                        <option value="Commercial Farming">Commercial Farming</option>
+                                        <option value="Landscaping">Landscaping</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Additional Information*</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <button type="submit" class="magnetic-button glow-on-hover w-full bg-brand-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-dark transition-colors duration-300 flex items-center justify-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                    Submit Enquiry
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h2 class="animate-on-scroll" data-animation="fade-in" class="text-xl font-bold mb-4 text-white">fertilizer.map</h2>
+                    <p class="text-gray-400 mb-4">Providing sustainable and organic fertilizer solutions for modern agriculture, gardens, and landscaping.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.5 5.5H15V4.19A1.19 1.19 0 0116.19 3h2.06v-3h-3.19A4.1 4.1 0 0011 4.25V5.5H9v3h2v8.5h4V8.5h2.5l1-3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 5.8a8.6 8.6 0 01-2.4.7 4.4 4.4 0 001.9-2.4 8.5 8.5 0 01-2.7 1 4.3 4.3 0 00-7.3 3.9A12.1 12.1 0 013 4.9a4.3 4.3 0 001.3 5.7 4.2 4.2 0 01-1.9-.6v.1c0 2 1.4 3.8 3.4 4.2a4.1 4.1 0 01-2 .1 4.3 4.3 0 004 3 8.6 8.6 0 01-5.3 1.8c-.3 0-.7 0-1-.1a12.1 12.1 0 006.6 1.9c7.9 0 12.2-6.5 12.2-12.2v-.6A8.8 8.8 0 0022 5.8z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-brand-accent">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-brand-accent">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-400">123 Green Valley Road, Agriculture Park, CA 95814</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@fertilizer.map</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-brand-accent">Business Hours</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Monday-Friday: 9am - 5pm</li>
+                        <li class="text-gray-400">Saturday: 10am - 2pm</li>
+                        <li class="text-gray-400">Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-500 text-sm">© 2023 fertilizer.map. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Data and Loading Scripts -->
+    <script src="js/data/products.js"></script>
+    
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    mobileMenuButton.setAttribute('aria-expanded', !expanded);
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    if (expanded) {
+                        mobileMenu.style.opacity = '0';
+                        mobileMenu.style.maxHeight = '0';
+                    } else {
+                        mobileMenu.style.opacity = '1';
+                        mobileMenu.style.maxHeight = '500px';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <!-- JavaScript for Product Enquiry Form -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Load product data and populate the product information
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get product ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || urlParams.get('product');
+            
+            if (productId) {
+                // Set the product ID in the hidden form field
+                document.getElementById('product-id').value = productId;
+                
+                // Fetch product data
+                loadProductInfo(productId);
+            } else {
+                // No product ID provided, show generic form
+                document.getElementById('product-title').textContent = 'General Product Enquiry';
+                
+                // Update product details
+                document.getElementById('product-details').innerHTML = `
+                    <p class="text-gray-600">
+                        Please fill out the form to submit a general enquiry about our products. 
+                        Our team will get back to you as soon as possible.
+                    </p>
+                `;
+                
+                // Update product image
+                document.getElementById('product-image').innerHTML = `
+                    <img src="https://source.unsplash.com/random/800x600/?farming" alt="fertilizer.map products" class="w-full h-48 object-cover rounded-lg">
+                `;
+            }
+            
+            // Handle form submission
+            const enquiryForm = document.getElementById('enquiry-form');
+            if (enquiryForm) {
+                enquiryForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real application, you would send this data to your server
+                    // For demo purposes, we'll just show a success message
+                    
+                    // Show success notification
+                    showNotification(
+                        'Enquiry Submitted Successfully', 
+                        'Thank you for your enquiry. Our team will contact you within 24 hours.',
+                        'success'
+                    );
+                    
+                    // Reset form after submission
+                    setTimeout(() => {
+                        enquiryForm.reset();
+                        
+                        // Redirect to products page after submission
+                        setTimeout(() => {
+                            window.location.href = 'products.html';
+                        }, 2000);
+                    }, 1000);
+                });
+            }
+        });
+        
+        // Function to load product info
+        function loadProductInfo(productId) {
+            // Find the product by ID
+            const product = productsData.find(p => p.id === productId);
+            
+            if (product) {
+                // Update page title
+                document.title = `Enquiry: ${product.name} - fertilizer.map`;
+                
+                // Update product title
+                document.getElementById('product-title').textContent = product.name;
+                
+                // Update product details
+                document.getElementById('product-details').innerHTML = `
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-gray-800">${product.name}</h3>
+                        <p class="text-brand-primary font-medium">Premium Fertilizer</p>
+                    </div>
+                    <p class="text-gray-600">${product.shortDescription}</p>
+                    <div class="mt-4 flex items-center">
+                        <div class="flex text-yellow-500">
+                            ${createStarRating(product.rating)}
+                        </div>
+                        <span class="text-gray-500 text-sm ml-2">${product.reviews || Math.floor(Math.random() * 200) + 50} reviews</span>
+                    </div>
+                `;
+                
+                // Update product image
+                document.getElementById('product-image').innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-lg">
+                `;
+                
+                // Pre-fill the message with some product details
+                document.getElementById('message').value = `I'm interested in ${product.name} and would like more information about pricing, availability, and application recommendations.`;
+            } else {
+                // Product not found
+                document.getElementById('product-title').textContent = 'Product Not Found';
+                
+                // Update product details
+                document.getElementById('product-details').innerHTML = `
+                    <p class="text-gray-600">
+                        Sorry, the product you're looking for could not be found. 
+                        Please fill out the form with your enquiry and we'll get back to you.
+                    </p>
+                `;
+                
+                // Update product image
+                document.getElementById('product-image').innerHTML = `
+                    <img src="https://source.unsplash.com/random/800x600/?farming" alt="fertilizer.map products" class="w-full h-48 object-cover rounded-lg">
+                `;
+            }
+        }
+        
+        // Helper function to create star rating HTML
+        function createStarRating(rating) {
+            let stars = '';
+            for (let i = 0; i < 5; i++) {
+                if (i < rating) {
+                    stars += `
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>`;
+                } else {
+                    stars += `
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>`;
+                }
+            }
+            return stars;
+        }
+        
+        // Function to show notification
+        function showNotification(title, message, type = 'info') {
+            const notification = document.createElement('div');
+            
+            // Set notification style based on type
+            let bgColor, borderColor, textColor, icon;
+            
+            if (type === 'success') {
+                bgColor = 'bg-green-100';
+                borderColor = 'border-green-500';
+                textColor = 'text-green-700';
+                icon = '<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+            } else {
+                bgColor = 'bg-blue-100';
+                borderColor = 'border-blue-500';
+                textColor = 'text-blue-700';
+                icon = '<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+            }
+            
+            notification.className = `fixed top-24 right-4 ${bgColor} border-l-4 ${borderColor} ${textColor} p-4 rounded shadow-lg transition-all duration-500 transform translate-x-full max-w-md z-50`;
+            notification.innerHTML = `
+                <div class="flex">
+                    ${icon}
+                    <div>
+                        <p class="font-bold">${title}</p>
+                        <p>${message}</p>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate the notification
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 10);
+            
+            // Remove the notification after a delay
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    notification.remove();
+                }, 500);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+
+
+
+

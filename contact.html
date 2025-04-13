@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - fertilizer.map</title>
+    <meta name="description" content="Get in touch with fertilizer.map for all your agricultural needs">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Leaflet Map CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-light': '#cbdfd4',
+                        'brand-primary': '#1c9444',
+                        'brand-dark': '#14643c',
+                        'brand-secondary': '#699d80',
+                        'brand-accent': '#82b99c'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="js/modern-effects.js" defer></script>
+    <style>
+        /* Ensure container is consistent across all pages */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css"></style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Back Button -->
+                <a href="index.html" class="flex items-center text-brand-primary hover:text-brand-dark transition-colors">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="font-medium">Back to Home</span>
+                </a>
+                
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-brand-primary flex items-center">
+                    <span class="mr-2">🌱</span> fertilizer.map
+                </a>
+                
+                <!-- Spacer to maintain centering of logo -->
+                <div class="w-24"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="pt-32 pb-16 bg-brand-light relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-secondary rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute top-20 right-10 w-20 h-20 bg-brand-primary rounded-full opacity-10 animate-ping" style="animation-duration: 3s;"></div>
+        <div class="absolute bottom-10 left-1/4 w-32 h-32 bg-brand-accent rounded-full opacity-15 animate-pulse" style="animation-duration: 4s;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6" data-aos="fade-up">Contact Us</h1>
+            <p class="text-xl text-gray-600 max-w-2xl" data-aos="fade-up" data-aos-delay="100">
+                Have questions about our organic fertilizers? We're here to help you grow better crops with sustainable solutions.
+            </p>
+            <div class="flex gap-4 mt-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex items-center text-gray-600">
+                    <svg class="w-5 h-5 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Quick Response Within 24 Hours</span>
+                </div>
+                <div class="flex items-center text-gray-600">
+                    <svg class="w-5 h-5 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Expert Agricultural Advice</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information and Map -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-right">
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-brand-primary transition-transform duration-300 hover:scale-105 relative">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="inline-block mr-3 p-2 bg-brand-light rounded-full">
+                                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </span>
+                            Get a Quote
+                        </h2>
+                        
+                        <!-- Phone -->
+                        <div class="mb-6 hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-lg font-semibold text-brand-primary mb-2 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                                Phone
+                            </h3>
+                            <p class="text-gray-600">
+                                Main Office: +1 (555) 123-4567<br>
+                                Customer Support: +1 (555) 987-6543<br>
+                                <span class="text-sm text-brand-primary">Available Mon-Fri, 8am-6pm PST</span>
+                            </p>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="mb-6 hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-lg font-semibold text-brand-primary mb-2 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                                Email
+                            </h3>
+                            <p class="text-gray-600">
+                                General Inquiries: info@fertilizer.map<br>
+                                Sales: sales@fertilizer.map<br>
+                                Technical Support: support@fertilizer.map
+                            </p>
+                        </div>
+                        
+                        <!-- Office -->
+                        <div class="mb-6 hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-lg font-semibold text-brand-primary mb-2 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Office
+                            </h3>
+                            <p class="text-gray-600">
+                                Main Headquarters:<br>
+                                123 Green Valley Road<br>
+                                Agriculture Park, CA 95814<br><br>
+                                Regional Office:<br>
+                                456 Farming Avenue<br>
+                                Cropland, OR 97403
+                            </p>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-lg font-semibold text-brand-primary mb-2 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                </svg>
+                                Business Hours
+                            </h3>
+                            <ul class="text-gray-600">
+                                <li class="mb-1 flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Monday-Friday: 9am - 5pm
+                                </li>
+                                <li class="mb-1 flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Saturday: 10am - 2pm
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-4 h-4 mr-2 text-brand-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Sunday: Closed
+                                </li>
+                            </ul>
+                            <div class="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-500 rounded">
+                                <p class="text-sm text-yellow-700">
+                                    <span class="font-semibold">Note:</span> Our customer service team is available 24/7 for emergency inquiries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full border-t-4 border-brand-primary">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="inline-block mr-3 p-2 bg-brand-light rounded-full">
+                                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </span>
+                            Visit Our Office
+                        </h2>
+                        <div id="map" class="w-full h-[500px] rounded-lg mb-6"></div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-gray-800 mb-2">Directions:</h3>
+                            <p class="text-gray-600 mb-4">
+                                Our headquarters is conveniently located 10 minutes from downtown Sacramento. Free parking is available on site.
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-white p-3 rounded shadow-sm border-l-4 border-brand-primary">
+                                    <h4 class="font-semibold text-gray-800">Public Transportation</h4>
+                                    <p class="text-gray-600 text-sm">
+                                        Bus routes 15, 23, and 47 stop directly in front of our building.
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-white p-3 rounded shadow-sm border-l-4 border-brand-primary">
+                                    <h4 class="font-semibold text-gray-800">From the Airport</h4>
+                                    <p class="text-gray-600 text-sm">
+                                        Sacramento International Airport is 25 minutes away by car.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 flex justify-center space-x-4">
+                            <a href="#" class="text-brand-primary hover:text-brand-dark flex items-center transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                                Download Directions PDF
+                            </a>
+                            <a href="https://maps.google.com" target="_blank" class="text-brand-primary hover:text-brand-dark flex items-center transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                                </svg>
+                                Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ask a Question Section -->
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" data-aos="fade-up">Ask a Question</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 border-t-4 border-brand-primary" data-aos="fade-up" data-aos-delay="100">
+                <form id="question-form" class="space-y-6">
+                    <div>
+                        <label for="question-name" class="block text-sm font-medium text-gray-700 mb-1">Your Name*</label>
+                        <input type="text" id="question-name" name="question-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required>
+                    </div>
+                    
+                    <div>
+                        <label for="question-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                        <input type="email" id="question-email" name="question-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required>
+                    </div>
+                    
+                    <div>
+                        <label for="question-topic" class="block text-sm font-medium text-gray-700 mb-1">Topic</label>
+                        <select id="question-topic" name="question-topic" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary">
+                            <option value="">Select a topic</option>
+                            <option value="Products">Products</option>
+                            <option value="Shipping">Shipping & Delivery</option>
+                            <option value="Applications">Application Methods</option>
+                            <option value="Technical">Technical Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="question-text" class="block text-sm font-medium text-gray-700 mb-1">Your Question*</label>
+                        <textarea id="question-text" name="question-text" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary" required></textarea>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-brand-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-dark transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                            </svg>
+                            Submit Question
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800">What is fertilizer.map?</h3>
+                    <p class="text-gray-600 mt-2">fertilizer.map is a company dedicated to providing eco-friendly fertilizers to enhance crop yields sustainably.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800">How can I contact customer support?</h3>
+                    <p class="text-gray-600 mt-2">You can reach our customer support team via email at support@fertilizer.map or call us at +1 234 567 890.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800">Do you offer international shipping?</h3>
+                    <p class="text-gray-600 mt-2">Yes, we offer international shipping to select countries. Please contact us for more details.</p>
+                </div>
+                <!-- Dynamic FAQs will be added here -->
+                <div id="dynamic-faqs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the same footer as index.html -->
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">fertilizer.map</h3>
+                    <p class="text-gray-400">Growing better crops, naturally.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white">Products</a></li>
+                        <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@fertilizer.map</li>
+                        <li>+1 234 567 890</li>
+                        <li>123 Farming Street</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 fertilizer.map. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Map -->
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([38.5816, -121.4944], 15); // Sacramento coordinates
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add marker for office location
+        L.marker([38.5816, -121.4944])
+            .addTo(map)
+            .bindPopup('fertilizer.map<br>123 Green Valley Road')
+            .openPopup();
+    </script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+    <!-- FAQ and Question Form Handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load existing FAQs from localStorage
+            loadFAQs();
+            
+            // Handle question form submission
+            const questionForm = document.getElementById('question-form');
+            if (questionForm) {
+                questionForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('question-name').value;
+                    const email = document.getElementById('question-email').value;
+                    const topic = document.getElementById('question-topic').value;
+                    const question = document.getElementById('question-text').value;
+                    
+                    // Save the question as a potential FAQ
+                    saveQuestion(name, email, topic, question);
+                    
+                    // Show success notification
+                    showNotification(
+                        'Question Submitted Successfully', 
+                        'Thank you for your question. Our team will review and respond shortly.',
+                        'success'
+                    );
+                    
+                    // Reset form
+                    questionForm.reset();
+                });
+            }
+        });
+        
+        // Function to save a question
+        function saveQuestion(name, email, topic, question) {
+            // Get existing questions from localStorage or initialize empty array
+            let questions = JSON.parse(localStorage.getItem('fertilizer_questions')) || [];
+            
+            // Add new question
+            questions.push({
+                name: name,
+                email: email,
+                topic: topic,
+                question: question,
+                date: new Date().toISOString(),
+                answered: false,
+                answer: '',
+                public: false
+            });
+            
+            // Save back to localStorage
+            localStorage.setItem('fertilizer_questions', JSON.stringify(questions));
+            
+            // Also add to FAQs if needed in the future
+            // For demo purposes, we'll add it as answered for display
+            let faqs = JSON.parse(localStorage.getItem('fertilizer_faqs')) || [];
+            faqs.push({
+                question: question,
+                answer: "Thank you for your question. Our team will provide an answer soon.",
+                topic: topic,
+                date: new Date().toISOString()
+            });
+            
+            // Save FAQs
+            localStorage.setItem('fertilizer_faqs', JSON.stringify(faqs));
+            
+            // Refresh FAQs display
+            loadFAQs();
+        }
+        
+        // Function to load FAQs
+        function loadFAQs() {
+            const faqsContainer = document.getElementById('dynamic-faqs');
+            if (!faqsContainer) return;
+            
+            // Get FAQs from localStorage
+            const faqs = JSON.parse(localStorage.getItem('fertilizer_faqs')) || [];
+            
+            // Clear existing dynamic FAQs
+            faqsContainer.innerHTML = '';
+            
+            // Add each FAQ to the container
+            faqs.forEach(faq => {
+                const faqElement = document.createElement('div');
+                faqElement.className = 'bg-white p-6 rounded-lg shadow-md';
+                faqElement.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-800">${faq.question}</h3>
+                    <p class="text-gray-600 mt-2">${faq.answer}</p>
+                    ${faq.topic ? `<span class="inline-block mt-2 px-3 py-1 bg-brand-light text-brand-primary text-xs font-semibold rounded-full">${faq.topic}</span>` : ''}
+                `;
+                
+                faqsContainer.appendChild(faqElement);
+            });
+        }
+        
+        // Function to show notification
+        function showNotification(title, message, type = 'info') {
+            const notification = document.createElement('div');
+            
+            // Set notification style based on type
+            let bgColor, borderColor, textColor, icon;
+            
+            if (type === 'success') {
+                bgColor = 'bg-green-100';
+                borderColor = 'border-green-500';
+                textColor = 'text-green-700';
+                icon = '<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+            } else {
+                bgColor = 'bg-blue-100';
+                borderColor = 'border-blue-500';
+                textColor = 'text-blue-700';
+                icon = '<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+            }
+            
+            notification.className = `fixed top-24 right-4 ${bgColor} border-l-4 ${borderColor} ${textColor} p-4 rounded shadow-lg transition-all duration-500 transform translate-x-full max-w-md z-50`;
+            notification.innerHTML = `
+                <div class="flex">
+                    ${icon}
+                    <div>
+                        <p class="font-bold">${title}</p>
+                        <p>${message}</p>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate the notification
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 10);
+            
+            // Remove the notification after a delay
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    notification.remove();
+                }, 5000);
+            }, 5000);
+        }
+    </script>
+</body>
+</html> 
