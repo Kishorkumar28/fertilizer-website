@@ -109,7 +109,15 @@ The website includes:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is **not** licensed for public or private use.
+
+- Commercial use: ❌ Not permitted  
+- Distribution: ❌ Not permitted  
+- Modification: ❌ Not permitted  
+- Patent use: ❌ Not permitted  
+- Private use: ❌ Not permitted  
+
+All rights reserved. For more details, see the [LICENSE](./LICENSE) file.
 
 ## Contact
 
