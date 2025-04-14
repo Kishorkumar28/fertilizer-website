@@ -15,7 +15,7 @@ const galleryData = [
         id: 2,
         title: "Nutrient-Rich Compost",
         category: "fertilizer",
-        thumbnail: "image/gallery/Nutrient_Rich_Compost.jpg",
+        thumbnail: "image/Gallery/Nutrient_Rich_Compost.jpg",
         fullImage: "image/Gallery/Nutrient_Rich_Compost.jpg",
         description: "Nutrient-rich compost preparation for organic fertilizer production.",
         featured: false,
