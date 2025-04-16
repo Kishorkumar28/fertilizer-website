@@ -311,120 +311,30 @@
     </main>
 
     <!-- Hero Section -->
-    <section class="pt-32 md:pt-20 pb-16 md:pb-24 relative overflow-hidden bg-gradient-to-br from-emerald-900/90 via-gray-900 to-green-950/90">
-        <!-- Animated background elements for fertilizer company -->
+    <section class="pt-32 md:pt-20 pb-16 md:pb-24 relative overflow-hidden bg-gradient-to-br from-green-800 via-green-900 to-emerald-950">
+        <!-- Simplified background with blur effects -->
         <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
-            <!-- Growing plants animation -->
-            <div class="absolute bottom-0 left-[10%] w-16 h-64 opacity-30">
-                <div class="absolute bottom-0 w-1 h-0 bg-green-500 animate-grow-tall" style="animation-duration: 8s; animation-delay: 0.5s; left: 50%; transform: translateX(-50%);"></div>
-                <div class="absolute bottom-[30%] left-0 w-4 h-12 bg-green-400 rounded-full transform -rotate-45 scale-0 origin-bottom-left animate-grow-leaf" style="animation-duration: 6s; animation-delay: 3s;"></div>
-                <div class="absolute bottom-[50%] right-0 w-4 h-10 bg-green-400 rounded-full transform rotate-45 scale-0 origin-bottom-right animate-grow-leaf" style="animation-duration: 6s; animation-delay: 4s;"></div>
-                <div class="absolute bottom-[70%] left-2 w-4 h-8 bg-green-400 rounded-full transform -rotate-45 scale-0 origin-bottom-left animate-grow-leaf" style="animation-duration: 6s; animation-delay: 5s;"></div>
-            </div>
+            <!-- Blurred animated circles -->
+            <div class="absolute top-[20%] left-[10%] w-40 h-40 rounded-full bg-emerald-500/10 blur-2xl animate-float-slow"></div>
+            <div class="absolute top-[50%] right-[20%] w-52 h-52 rounded-full bg-green-600/15 blur-3xl animate-float-medium" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-[10%] left-[30%] w-64 h-64 rounded-full bg-teal-500/10 blur-2xl animate-float-slow" style="animation-delay: 1s;"></div>
+            <div class="absolute top-[30%] right-[25%] w-32 h-32 rounded-full bg-emerald-400/10 blur-xl animate-float-medium" style="animation-delay: 3s;"></div>
+            <div class="absolute bottom-[30%] right-[10%] w-48 h-48 rounded-full bg-green-500/15 blur-2xl animate-pulse" style="animation-duration: 8s;"></div>
             
-            <div class="absolute bottom-0 left-[30%] w-16 h-48 opacity-30">
-                <div class="absolute bottom-0 w-1 h-0 bg-green-500 animate-grow-tall" style="animation-duration: 6s; left: 50%; transform: translateX(-50%);"></div>
-                <div class="absolute bottom-[40%] left-0 w-5 h-14 bg-green-400 rounded-full transform -rotate-45 scale-0 origin-bottom-left animate-grow-leaf" style="animation-duration: 5s; animation-delay: 2s;"></div>
-                <div class="absolute bottom-[60%] right-0 w-5 h-12 bg-green-400 rounded-full transform rotate-45 scale-0 origin-bottom-right animate-grow-leaf" style="animation-duration: 5s; animation-delay: 3s;"></div>
-            </div>
-            
-            <div class="absolute bottom-0 right-[20%] w-16 h-56 opacity-30">
-                <div class="absolute bottom-0 w-1 h-0 bg-green-500 animate-grow-tall" style="animation-duration: 7s; animation-delay: 1s; left: 50%; transform: translateX(-50%);"></div>
-                <div class="absolute bottom-[35%] left-0 w-5 h-14 bg-green-400 rounded-full transform -rotate-45 scale-0 origin-bottom-left animate-grow-leaf" style="animation-duration: 5.5s; animation-delay: 3.5s;"></div>
-                <div class="absolute bottom-[55%] right-0 w-5 h-12 bg-green-400 rounded-full transform rotate-45 scale-0 origin-bottom-right animate-grow-leaf" style="animation-duration: 5.5s; animation-delay: 4.5s;"></div>
-                <div class="absolute bottom-[75%] left-2 w-4 h-10 bg-green-400 rounded-full transform -rotate-45 scale-0 origin-bottom-left animate-grow-leaf" style="animation-duration: 5.5s; animation-delay: 5.5s;"></div>
-            </div>
-            
-            <!-- Nutrient particles rising from soil -->
-            <div class="absolute bottom-0 inset-x-0 h-16">
-                <div class="absolute bottom-0 left-[15%] w-2 h-2 rounded-full bg-yellow-300/60 animate-float-nutrient" style="animation-duration: 15s;"></div>
-                <div class="absolute bottom-0 left-[25%] w-1.5 h-1.5 rounded-full bg-blue-300/60 animate-float-nutrient" style="animation-duration: 12s; animation-delay: 2s;"></div>
-                <div class="absolute bottom-0 left-[45%] w-2 h-2 rounded-full bg-green-300/60 animate-float-nutrient" style="animation-duration: 18s; animation-delay: 5s;"></div>
-                <div class="absolute bottom-0 left-[65%] w-1.5 h-1.5 rounded-full bg-yellow-300/60 animate-float-nutrient" style="animation-duration: 14s; animation-delay: 3s;"></div>
-                <div class="absolute bottom-0 left-[80%] w-2 h-2 rounded-full bg-blue-300/60 animate-float-nutrient" style="animation-duration: 16s; animation-delay: 4s;"></div>
-            </div>
-            
-            <!-- Rain droplets - representing water mixed with fertilizer -->
-            <div class="absolute top-0 inset-x-0 h-32">
-                <div class="absolute top-0 left-[10%] w-0.5 h-6 bg-gradient-to-b from-transparent via-blue-300/40 to-blue-400/60 rounded-b-full animate-rain-drop" style="animation-duration: 4s; animation-delay: 1s;"></div>
-                <div class="absolute top-0 left-[20%] w-0.5 h-4 bg-gradient-to-b from-transparent via-blue-300/40 to-blue-400/60 rounded-b-full animate-rain-drop" style="animation-duration: 3s; animation-delay: 0.5s;"></div>
-                <div class="absolute top-0 left-[35%] w-0.5 h-5 bg-gradient-to-b from-transparent via-blue-300/40 to-blue-400/60 rounded-b-full animate-rain-drop" style="animation-duration: 4.5s; animation-delay: 1.5s;"></div>
-                <div class="absolute top-0 left-[55%] w-0.5 h-6 bg-gradient-to-b from-transparent via-blue-300/40 to-blue-400/60 rounded-b-full animate-rain-drop" style="animation-duration: 3.5s; animation-delay: 0.8s;"></div>
-                <div class="absolute top-0 left-[70%] w-0.5 h-4 bg-gradient-to-b from-transparent via-blue-300/40 to-blue-400/60 rounded-b-full animate-rain-drop" style="animation-duration: 5s; animation-delay: 2.3s;"></div>
-                <div class="absolute top-0 left-[85%] w-0.5 h-5 bg-gradient-to-b from-transparent via-blue-300/40 to-blue-400/60 rounded-b-full animate-rain-drop" style="animation-duration: 4s; animation-delay: 1.8s;"></div>
-            </div>
-
-            <!-- NEW: Floating soil particles with parallax effect -->
-            <div class="absolute inset-0 opacity-30 pointer-events-none">
-                <!-- Layer 1 (Closest) -->
-                <div class="absolute h-full w-full">
-                    <div class="absolute top-[15%] left-[22%] w-1 h-1 rounded-full bg-amber-800/70 animate-float-parallax" style="--parallax-speed: 2; animation-duration: 25s;"></div>
-                    <div class="absolute top-[45%] left-[13%] w-0.5 h-0.5 rounded-full bg-amber-600/70 animate-float-parallax" style="--parallax-speed: 2.5; animation-duration: 22s; animation-delay: 1s;"></div>
-                    <div class="absolute top-[25%] left-[78%] w-1 h-1 rounded-full bg-amber-800/70 animate-float-parallax" style="--parallax-speed: 2.2; animation-duration: 24s; animation-delay: 2s;"></div>
-                    <div class="absolute top-[55%] left-[85%] w-0.5 h-0.5 rounded-full bg-amber-700/70 animate-float-parallax" style="--parallax-speed: 2.8; animation-duration: 23s; animation-delay: 3s;"></div>
-                </div>
-                
-                <!-- Layer 2 (Middle) -->
-                <div class="absolute h-full w-full">
-                    <div class="absolute top-[35%] left-[45%] w-0.5 h-0.5 rounded-full bg-amber-600/60 animate-float-parallax" style="--parallax-speed: 1.5; animation-duration: 35s; animation-delay: 1.5s;"></div>
-                    <div class="absolute top-[65%] left-[28%] w-0.5 h-0.5 rounded-full bg-amber-700/60 animate-float-parallax" style="--parallax-speed: 1.8; animation-duration: 32s; animation-delay: 2.5s;"></div>
-                    <div class="absolute top-[38%] left-[63%] w-0.5 h-0.5 rounded-full bg-amber-600/60 animate-float-parallax" style="--parallax-speed: 1.2; animation-duration: 38s; animation-delay: 3.5s;"></div>
-                </div>
-                
-                <!-- Layer 3 (Farthest) -->
-                <div class="absolute h-full w-full">
-                    <div class="absolute top-[50%] left-[50%] w-0.5 h-0.5 rounded-full bg-amber-700/50 animate-float-parallax" style="--parallax-speed: 0.8; animation-duration: 45s;"></div>
-                    <div class="absolute top-[75%] left-[38%] w-0.5 h-0.5 rounded-full bg-amber-600/50 animate-float-parallax" style="--parallax-speed: 0.6; animation-duration: 48s; animation-delay: 2s;"></div>
-                    <div class="absolute top-[20%] left-[70%] w-0.5 h-0.5 rounded-full bg-amber-800/50 animate-float-parallax" style="--parallax-speed: 0.9; animation-duration: 42s; animation-delay: 4s;"></div>
-                </div>
-            </div>
-            
-            <!-- NEW: Elegant light beams -->
-            <div class="absolute inset-0 flex justify-around items-center overflow-hidden">
-                <div class="light-beam bg-gradient-to-b from-transparent via-white/1 to-transparent h-screen w-[2px] skew-x-12 animate-beam-move" style="animation-delay: 0s;"></div>
-                <div class="light-beam bg-gradient-to-b from-transparent via-white/2 to-transparent h-screen w-[3px] -skew-x-12 animate-beam-move" style="animation-delay: 2s;"></div>
-                <div class="light-beam bg-gradient-to-b from-transparent via-white/1 to-transparent h-screen w-[2px] skew-x-12 animate-beam-move" style="animation-delay: 4s;"></div>
-                <div class="light-beam bg-gradient-to-b from-transparent via-white/2 to-transparent h-screen w-[3px] -skew-x-12 animate-beam-move" style="animation-delay: 6s;"></div>
-                <div class="light-beam bg-gradient-to-b from-transparent via-white/1 to-transparent h-screen w-[2px] skew-x-12 animate-beam-move" style="animation-delay: 8s;"></div>
-            </div>
-            
-            <!-- NEW: Shimmering waves at the bottom (representing rich soil) -->
-            <div class="absolute bottom-0 left-0 right-0 h-40 overflow-hidden opacity-50">
-                <div class="w-full h-16 bg-gradient-to-r from-amber-900/30 via-amber-800/30 to-amber-900/30 rounded-[100%] transform translate-y-[60%] animate-wave" style="animation-delay: 0s;"></div>
-                <div class="w-[120%] h-16 bg-gradient-to-r from-amber-800/20 via-amber-700/20 to-amber-800/20 rounded-[100%] transform translate-y-[40%] -translate-x-[10%] animate-wave" style="animation-delay: 0.5s; animation-duration: 9s;"></div>
-                <div class="w-[110%] h-12 bg-gradient-to-r from-amber-700/15 via-amber-600/15 to-amber-700/15 rounded-[100%] transform translate-y-[20%] -translate-x-[5%] animate-wave" style="animation-delay: 1s; animation-duration: 7s;"></div>
-            </div>
-            
-            <!-- NEW: Seasonal weather effect (light dust particles) -->
-            <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <div class="dust-particle absolute top-[10%] left-[10%] w-0.5 h-0.5 rounded-full bg-amber-200/40 animate-dust"></div>
-                <div class="dust-particle absolute top-[15%] left-[25%] w-0.5 h-0.5 rounded-full bg-amber-200/30 animate-dust" style="animation-delay: 1s; animation-duration: 11s;"></div>
-                <div class="dust-particle absolute top-[8%] left-[40%] w-0.5 h-0.5 rounded-full bg-amber-100/40 animate-dust" style="animation-delay: 2s; animation-duration: 9s;"></div>
-                <div class="dust-particle absolute top-[12%] left-[60%] w-0.5 h-0.5 rounded-full bg-amber-100/30 animate-dust" style="animation-delay: 3s; animation-duration: 12s;"></div>
-                <div class="dust-particle absolute top-[18%] left-[75%] w-0.5 h-0.5 rounded-full bg-amber-200/40 animate-dust" style="animation-delay: 4s; animation-duration: 10s;"></div>
-                <div class="dust-particle absolute top-[22%] left-[90%] w-0.5 h-0.5 rounded-full bg-amber-200/30 animate-dust" style="animation-delay: 5s; animation-duration: 13s;"></div>
-                <div class="dust-particle absolute top-[7%] left-[5%] w-0.5 h-0.5 rounded-full bg-amber-100/40 animate-dust" style="animation-delay: 6s; animation-duration: 11.5s;"></div>
-                <div class="dust-particle absolute top-[25%] left-[15%] w-0.5 h-0.5 rounded-full bg-amber-100/30 animate-dust" style="animation-delay: 7s; animation-duration: 9.5s;"></div>
-                <div class="dust-particle absolute top-[5%] left-[55%] w-0.5 h-0.5 rounded-full bg-amber-200/40 animate-dust" style="animation-delay: 8s; animation-duration: 12.5s;"></div>
-                <div class="dust-particle absolute top-[15%] left-[85%] w-0.5 h-0.5 rounded-full bg-amber-200/30 animate-dust" style="animation-delay: 9s; animation-duration: 10.5s;"></div>
-            </div>
-
-            <!-- Premium geometric background patterns -->
-            <div class="absolute inset-0 w-full h-full opacity-15">
+            <!-- Simple dot pattern overlay -->
+            <div class="absolute inset-0 w-full h-full opacity-10">
                 <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
                             <circle cx="2" cy="2" r="1" fill="white" />
                         </pattern>
-                        <linearGradient id="green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
-                            <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"/>
-                        </linearGradient>
                     </defs>
                     <rect x="0" y="0" width="100%" height="100%" fill="url(#dotPattern)" />
-                    <rect x="0" y="0" width="100%" height="100%" fill="url(#green-gradient)" style="mix-blend-mode: overlay" />
                 </svg>
             </div>
+            
+            <!-- Subtle gradient overlay for depth -->
+            <div class="absolute inset-0 bg-gradient-to-t from-green-950/50 to-transparent"></div>
         </div>
 
         <!-- Background Video with advanced overlay -->
