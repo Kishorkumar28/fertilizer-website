@@ -1,215 +1,210 @@
 // products.js - Data file for all products
 const productsData = [
+
     {
-        id: "organic-npk-plus",
-        name: "Organic NPK Plus",
-        category: "organic",
-        // price: "$29.99",
-        // originalPrice: "$34.99",
-        // discount: 15,
-        reviews: 189,
+        id: "mentore-amino-no1",
+        name: "Mentore Amino’s No-1",
+        category: "growth-stimulant",
         rating: 5,
-        image: "image/Products/Organic_NPK_Plus.jpg",
-        description: "Our premium organic NPK formula enhances crop yield while promoting soil health.",
-        shortDescription: "Balanced NPK ratio for optimal growth with trace minerals and micronutrients.",
+        reviews: 102,
+        image: "image/Products/Mentore_Amino.jpg",
+        description: "Increases female flowers and stimulates flower buds for better fruit set.",
+        shortDescription: "Boosts vegetative growth, flowering, and fruit set.",
         featured: true,
-        new: false,
+        new: true,
         details: {
-            fullDescription: "Our premium organic NPK formula enhances crop yield while promoting soil health. Formulated with plant-based ingredients and enriched with essential micronutrients, this balanced fertilizer provides complete nutrition for your crops throughout the growing season.",
+            fullDescription: "Mentore Amino’s No-1 enhances flowering by increasing female flowers, stimulating flower bud formation, and improving fruit set. Promotes vegetative growth during critical crop stages.",
             features: [
-                "Balanced NPK ratio for optimal growth",
-                "Enhanced with trace minerals and micronutrients",
-                "Promotes soil microbial activity",
-                "Slow-release formula for sustained nutrition"
+                "Increases female flower formation",
+                "Stimulates flower buds and vegetative growth",
+                "Improves fruit set",
+                "Fast action formula"
             ],
             benefits: [
-                "Improved crop yield and quality",
-                "Enhanced soil structure and fertility",
-                "Reduced environmental impact",
-                "Safe for beneficial insects and soil organisms"
+                "Improved flowering and productivity",
+                "Higher yield potential",
+                "Better fruit quality",
+                "Supports plant development at key stages"
             ],
             specifications: {
-                "NPK Ratio": "4-6-4",
-                "Weight": "5 kg, 10 kg, 25 kg bags",
-                "Application Rate": "2-3 kg per 100 sq. meters",
-                "Suitable For": "All crop types"
+                "Formulation": "Liquid Concentrate",
+                "Dosage": "3-5 ml per liter of water",
+                "Suitable For": "All flowering and fruiting crops",
+                "Size": "250 ml, 500 ml, 1L bottles"
             }
         }
     },
     {
-        id: "soil-revitalizer",
-        name: "Soil Revitalizer",
+        id: "mentore-green-spark-sl",
+        name: "Mentore Green Spark SL",
+        category: "plant-nutrition",
+        rating: 4,
+        reviews: 89,
+        image: "image/Products/mentore_spark.jpg",
+        description: "Improves nutrient uptake, flowering, and overall plant vigor.",
+        shortDescription: "Boosts root growth, flowering, immunity, and shoot development.",
+        featured: true,
+        new: true,
+        details: {
+            fullDescription: "Mentore Green Spark SL improves plant vitality by supporting better root and shoot growth. Enhances nutrient absorption, flowering, and disease resistance, making it ideal for boosting overall plant health.",
+            features: [
+                "Improves nutrient uptake",
+                "Enhances root growth",
+                "Stimulates shoot and side branch growth",
+                "Enhances immunity and flowering"
+                
+            ],
+            benefits: [
+                "Stronger plants and better crop yield",
+                "Improved flowering and fruit setting",
+                "Increased resistance to environmental stress",
+                "Better root-to-shoot ratio"
+            ],
+            specifications: {
+                "Formulation": "Liquid",
+                "Dosage": "3 ml per liter of water",
+                "Suitable For": "All crops during vegetative and flowering stages",
+                "Size": "250 ml, 500 ml, 1L"
+            }
+        }
+    },
+    {
+        id: "mentore-sakthi-gold",
+        name: "Mentore Sakthi Gold",
         category: "soil-health",
-        // price: "$24.99",
-        rating: 4,
-        reviews: 153,
-        image: "image/Products/Soil_Revitalizer.jpg",
-        description: "Restore depleted soil with our specialized soil health formula.",
-        shortDescription: "Rebuilds soil structure and increases microbial activity in depleted soils.",
-        featured: true,
-        new: true,
-        details: {
-            fullDescription: "Restore depleted soil with our specialized soil health formula. This unique blend of organic matter, beneficial microorganisms, and essential nutrients works to rebuild soil structure, increase biodiversity, and enhance nutrient cycling for healthier, more productive growing conditions.",
-            features: [
-                "Rich in organic matter and humic substances",
-                "Contains beneficial soil microorganisms",
-                "Improves soil structure and water retention",
-                "Enhances nutrient availability"
-            ],
-            benefits: [
-                "Revitalizes exhausted agricultural land",
-                "Reduces erosion and compaction",
-                "Increases water-holding capacity",
-                "Creates a healthy environment for root development"
-            ],
-            specifications: {
-                "Organic Matter": "65%",
-                "Weight": "10 kg, 20 kg bags",
-                "Application Rate": "3-5 kg per 100 sq. meters",
-                "Suitable For": "All soil types, especially depleted soils"
-            }
-        }
-    },
-    {
-        id: "liquid-growth-formula",
-        name: "Liquid Growth Formula",
-        category: "liquid",
-        // price: "$24.99",
-        rating: 4,
-        reviews: 189,
-        image: "image/Products/Liquid_Growth_Formula.jpg",
-        description: "Fast-acting liquid formula for immediate nutrient delivery.",
-        shortDescription: "Fast-acting liquid formula for immediate nutrient delivery. Perfect for nutrient-deficient soils or as a quick boost during critical growth stages.",
-        featured: true,
-        new: true,
-        details: {
-            fullDescription: "Fast-acting liquid formula for immediate nutrient delivery. Perfect for nutrient-deficient soils or as a quick boost during critical growth stages. This readily absorbable liquid fertilizer provides essential macronutrients and micronutrients directly to plant roots and foliage for rapid uptake.",
-            features: [
-                "Rapid nutrient delivery system",
-                "Balanced blend of macro and micronutrients",
-                "Suitable for both foliar and soil application",
-                "Enhanced with growth stimulants"
-            ],
-            benefits: [
-                "Quick correction of nutrient deficiencies",
-                "Accelerated plant growth during critical stages",
-                "Improved stress tolerance",
-                "Enhanced crop quality and yield"
-            ],
-            specifications: {
-                "Formulation": "Concentrated liquid",
-                "NPK Ratio": "7-3-7",
-                "Size": "1L, 5L, 20L containers",
-                "Dilution Rate": "10ml per liter of water",
-                "Suitable For": "All crops, especially during flowering and fruiting"
-            }
-        }
-    },
-    {
-        id: "premium-npk-blend",
-        name: "Premium NPK Blend",
-        category: "npk",
-        // price: "$19.99",
-        // originalPrice: "$23.50",
-        // discount: 15,
         rating: 5,
-        reviews: 426,
-        image: "image/Products/Premium_NPK_Blend.png",
-        description: "Balanced NPK formula with perfect 10-10-10 ratio.",
-        shortDescription: "Balanced NPK formula with perfect 10-10-10 ratio. Scientifically designed for maximum yield in all soil types and various crops. Long-lasting effect.",
+        reviews: 115,
+        image: "image/Products/mentore_sakthi_gold.jpg",
+        description: "Stimulates root and vegetative growth with pest repellency action.",
+        shortDescription: "Boosts yield with new shoot growth and improved root system.",
         featured: true,
         new: false,
         details: {
-            fullDescription: "Balanced NPK formula with perfect 10-10-10 ratio. Scientifically designed for maximum yield in all soil types and various crops. The slow-release granules provide consistent nutrition throughout the growing season while promoting healthy root development and robust plant growth.",
+            fullDescription: "Mentore Sakthi Gold enhances shoot and root system development, repels pests, and supports overall vegetative growth. Ideal for early stage crop establishment and yield enhancement.",
             features: [
-                "Perfect 10-10-10 NPK ratio",
-                "Slow-release granular formula",
-                "Enhanced with essential secondary nutrients",
-                "Long-lasting nutritional impact"
+                "Stimulates new shoots and flowering",
+                "Improves root system",
+                "Repellent action",
+                "Supports vegetative growth",
+                "Yield Increaser",
             ],
             benefits: [
-                "Balanced growth of roots, stems, leaves, and fruits",
-                "Consistent nutrition throughout growing season",
-                "Improved drought resistance",
-                "Higher yields and better quality produce"
+                "Better plant establishment",
+                "Reduced pest incidence",
+                "Enhanced yield",
+                "Strengthened plant structure"
             ],
             specifications: {
-                "NPK Ratio": "10-10-10",
-                "Weight": "5 kg, 10 kg, 25 kg bags",
-                "Application Rate": "2-3 kg per 100 sq. meters",
-                "Suitable For": "All crop types and soil conditions"
+                "Formulation": "Granular",
+                "Dosage": "20–40 kg per acre",
+                "Suitable For": "All crops",
+                "Size": "25 kg, 50 kg bags"
             }
         }
     },
     {
-        id: "compost-accelerator",
-        name: "Compost Accelerator",
-        category: "organic",
-        // price: "$15.99",
+        id: "mentore-nutri-gold",
+        name: "Mentore Nutri Gold",
+        category: "soil-health",
         rating: 5,
-        reviews: 207,
-        image: "image/Products/Compost_Accelerator.jpg",
-        description: "Speed up your composting process with our specialized microbial blend.",
-        shortDescription: "Accelerates decomposition and enhances compost quality.",
+        reviews: 98,
+        image: "image/Products/Mentore_Nutri_Gold.jpg",
+        description: "Soil conditioner enriched with secondary nutrients for improved fruit quality.",
+        shortDescription: "Corrects nutrient deficiencies and enhances fruit shine and weight.",
         featured: true,
         new: false,
         details: {
-            fullDescription: "Speed up your composting process with our specialized microbial blend. This powerful formula contains a diverse range of beneficial bacteria and fungi that accelerate decomposition, reduce odors, and produce higher quality compost in less time.",
+            fullDescription: "Mentore Nutri Gold is a high-quality soil conditioner designed to provide essential secondary nutrients. It addresses issues such as tomato fruit cracking and nutrient deficiencies, improving fruit quality and yield.",
             features: [
-                "Diverse blend of beneficial decomposer microorganisms",
-                "Activates and accelerates the composting process",
-                "Reduces unpleasant odors",
-                "Works in both hot and cold composting systems"
+                "Corrects secondary nutrient deficiencies",
+                "Improves fruit shine and weight",
+                "Enhances soil condition",
+                "Ideal for fruiting crops"
             ],
             benefits: [
-                "Produces finished compost in half the time",
-                "Enhances nutrient content of finished compost",
-                "Reduces odors and deters pests",
-                "Improves humus formation"
+                "Better crop quality and appearance",
+                "Improved market value of produce",
+                "Healthier plants with balanced nutrition",
+                "Reduced fruit cracking"
             ],
             specifications: {
-                "Formulation": "Dry granular blend",
-                "Size": "500g, 1kg packages",
-                "Application Rate": "50g per 100kg of compost material",
-                "Suitable For": "All compost systems and materials"
+                "Formulation": "Granular Soil Conditioner",
+                "Dosage": "50–100 kg per acre",
+                "Suitable For": "Tomato and all fruit-bearing crops",
+                "Size": "50 kg bag"
             }
         }
     },
     {
-        id: "micronutrient-blend",
-        name: "Micronutrient Mix",
-        category: "micronutrients",
-        // price: "$34.99",
+        id: "mentore-green-gold",
+        name: "Mentore Green Gold",
+        category: "plant-nutrition",
         rating: 5,
-        reviews: 312,
-        image: "image/Products/Micronutrient_Mix.png",
-        description: "Complete micronutrient solution with zinc, iron, manganese, copper, boron, and molybdenum.",
-        shortDescription: "Complete micronutrient solution with zinc, iron, manganese, copper, boron, and molybdenum. Prevents deficiencies that limit crop productivity and quality.",
+        reviews: 135,
+        image: "image/Products/Mentore_Green_Gold.jpg",
+        description: "Boosts root growth, resistance to diseases, and overall plant vitality.",
+        shortDescription: "Promotes nutrient uptake, seed filling, and resistance to stress.",
         featured: true,
         new: false,
         details: {
-            fullDescription: "Complete micronutrient solution with zinc, iron, manganese, copper, boron, and molybdenum. Prevents deficiencies that limit crop productivity and quality. This specialized formula ensures your crops get all the essential trace elements needed for optimal growth, flowering, and fruiting.",
+            fullDescription: "Mentore Green Gold is a powerful plant tonic designed to enhance plant vigor and productivity. It stimulates root development, improves grain and seed filling, and boosts resistance to pests, diseases, and climatic stress.",
             features: [
-                "Complete blend of essential micronutrients",
-                "Highly soluble and readily available forms",
-                "Balanced formulation prevents antagonistic effects",
-                "Can be applied as foliar spray or soil drench"
+                "Promotes vegetative growth and flowering",
+                "Enhances nutrient uptake and root strength",
+                "Supports stress tolerance",
+                "Increases grain/seed filling",
+                "Increases resistance to pests and diseases"
             ],
             benefits: [
-                "Prevents and corrects micronutrient deficiencies",
-                "Enhances enzyme function and metabolic processes",
-                "Improves flower formation and fruit set",
-                "Increases crop resilience to environmental stress"
+                "Stronger and healthier crops",
+                "Resilience to adverse climatic conditions",
+                "Higher yield and quality",
+                "Improved crop lifespan and sustainability"
             ],
             specifications: {
-                "Micronutrients": "Zn, Fe, Mn, Cu, B, Mo",
-                "Formulation": "Water-soluble powder",
-                "Size": "500g, 1kg packages",
-                "Application Rate": "1-2g per liter of water",
-                "Suitable For": "All crop types, especially high-value crops"
+                "Formulation": "Granular",
+                "Dosage": "1 kg per acre",
+                "Suitable For": "All field crops",
+                "Size": "1 kg pouch"
+            }
+        }
+    },
+    {
+        id: "mentore-peacock-gold",
+        name: "Mentore Peacock Gold",
+        category: "plant-nutrition",
+        rating: 5,
+        reviews: 120,
+        image: "image/Products/Mentore_Peacock_Gold.jpg",
+        description: "Advanced crop tonic for boosting resistance and growth.",
+        shortDescription: "Improves flowering, resistance to pests, and nutrient uptake.",
+        featured: true,
+        new: false,
+        details: {
+            fullDescription: "Mentore Peacock Gold is a versatile crop booster that stimulates root and vegetative growth, improves grain and seed quality, and builds resistance to pests and environmental stress. Ideal for all types of crops aiming for enhanced quality and resilience.",
+            features: [
+                "Promotes root and shoot development",
+                "Enhances nutrient absorption",
+                "Stimulates flowering",
+                "Improves stress and pest resistance",
+                "Increases climatic stress tolerance"
+            ],
+            benefits: [
+                "Healthy and resilient crops",
+                "Boosted productivity",
+                "Protection against environmental damage",
+                "Optimized plant vitality"
+            ],
+            specifications: {
+                "Formulation": "Granular",
+                "Dosage": "1 kg per acre",
+                "Suitable For": "All grains, vegetables, and commercial crops",
+                "Size": "1 kg pack"
             }
         }
     }
+    
+    
 ];
 
 // Add new products by simply adding new objects to the array above 

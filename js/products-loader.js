@@ -116,11 +116,12 @@ function createProductCard(product) {
     `;
     
     card.innerHTML = `
-        <div class="relative">
-            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+        <div class="relative bg-white flex items-center justify-center h-48 w-full overflow-hidden">
+            <img src="${product.image}" alt="${product.name}" class="object-contain h-full w-full">
             ${newBadge}
             ${discountBadge}
         </div>
+
         <div class="p-6">
             ${categoryBadge}
             <h3 class="text-xl font-semibold text-gray-800 mb-2">${product.name}</h3>
@@ -292,6 +293,7 @@ function loadProductDetails() {
                         <img src="${product.image}?v=4" alt="${product.name}" class="w-full h-20 object-cover">
                     </div>
                 </div>
+                
             </div>
             
             <div>
