@@ -1,0 +1,367 @@
+/* Ensure container is consistent across all pages */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text shadow for better readability over video backgrounds */
+.text-shadow-lg {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Animation keyframes */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes float-medium {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-soft {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Animation utility classes */
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+    animation: float-medium 4s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 4s ease-in-out infinite;
+}
+
+/* Hover effect for product cards */
+.product-card-hover {
+    transition: all 0.4s ease;
+}
+
+.product-card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Progressive reveal animation for items */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Performance optimization styles */
+.performance-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimize images */
+img {
+    content-visibility: auto;
+    contain: content;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optimize video */
+video {
+    contain: content;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Memory optimization */
+.memory-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Logo optimization */
+#navbar-logo img {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+.logo-text {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Button text color fixes */
+.magnetic-button.glow-on-hover {
+    color: white !important;
+}
+
+.magnetic-button.glow-on-hover:hover {
+    color: white !important;
+}
+
+/* Specific rule for Explore Products button */
+a[href="products.html"].magnetic-button.glow-on-hover,
+a[href="products.html"].magnetic-button.glow-on-hover:hover,
+a[href="products.html"].magnetic-button.glow-on-hover:focus,
+a[href="products.html"].magnetic-button.glow-on-hover:active {
+    color: white !important;
+}
+
+/* Prevent text color change on all green buttons */
+.bg-brand-primary,
+.bg-gradient-to-r.from-brand-primary,
+[class*="bg-green"],
+[class*="bg-brand"] {
+    color: white !important;
+}
+
+.bg-brand-primary:hover,
+.bg-gradient-to-r.from-brand-primary:hover,
+[class*="bg-green"]:hover,
+[class*="bg-brand"]:hover,
+.bg-brand-primary:focus,
+.bg-gradient-to-r.from-brand-primary:focus,
+[class*="bg-green"]:focus,
+[class*="bg-brand"]:focus {
+    color: white !important;
+}
+
+/* More specific button rules */
+button.bg-brand-primary,
+a.bg-brand-primary,
+.btn.bg-brand-primary,
+button.bg-gradient-to-r.from-brand-primary,
+a.bg-gradient-to-r.from-brand-primary,
+.btn.bg-gradient-to-r.from-brand-primary {
+    color: white !important;
+}
+
+button.bg-brand-primary:hover,
+a.bg-brand-primary:hover,
+.btn.bg-brand-primary:hover,
+button.bg-gradient-to-r.from-brand-primary:hover,
+a.bg-gradient-to-r.from-brand-primary:hover,
+.btn.bg-gradient-to-r.from-brand-primary:hover {
+    color: white !important;
+}
+
+/* Extracted styles for animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Performance optimizations for animations */
+.performance-optimized * {
+    animation-play-state: paused !important;
+    transition: none !important;
+}
+
+/* Optimize paint operations */
+.animate-float,
+.animate-pulse,
+.animate-bounce {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Optimize fixed elements */
+.fixed {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Prevent layout shifts */
+/* Note: img styles were already defined above */
+
+/* Optimize transitions */
+.transition-all {
+    will-change: transform, opacity;
+}
+
+/* Video optimization styles */
+#hero-video {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform;
+    contain: content;
+}
+
+/* Optimize video container */
+.video-container {
+    transform: translateZ(0);
+    will-change: transform;
+    contain: content;
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #hero-video {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Testimonial fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Counter animation styles */
+@keyframes counterPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes counterGlow {
+    0% { text-shadow: 0 0 0px rgba(74, 222, 128, 0.4); }
+    50% { text-shadow: 0 0 10px rgba(74, 222, 128, 0.8); }
+    100% { text-shadow: 0 0 0px rgba(74, 222, 128, 0.4); }
+}
+
+.counter-finished {
+    animation: counterPulse 0.5s ease-in-out, counterGlow 1.5s ease-in-out;
+    color: currentColor;
+    transition: color 0.3s ease;
+}
+
+.counter {
+    display: inline-block;
+    position: relative;
+}
+
+.counter::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 2s ease-in-out;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.counter.animated::after {
+    width: 100%;
+}
+
+.stat-counter {
+    position: relative;
+    display: inline-block;
+}
+
+.stat-counter::after {
+    content: attr(data-suffix);
+}
+
+/* Branded section label styles */
+.branded-section-label {
+    color: var(--brand-primary, #34a853) !important;
+}
+.branded-section-label:hover {
+    color: var(--brand-primary, #34a853) !important;
+}
+
+/* Added float animation from index.html */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Video optimization styles from index.html */
+#hero-video {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform;
+    contain: content;
+}
+
+/* Optimize video container */
+.video-container {
+    transform: translateZ(0);
+    will-change: transform;
+    contain: content;
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #hero-video {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Appended float animation from index.html */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+} 
