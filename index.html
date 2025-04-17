@@ -403,11 +403,11 @@
                     </p>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="counter-container flex flex-col items-center mb-6">
-                            <div class="text-4xl font-bold counter optimize-text" id="yearCounter">0</div>
+                            <div class="text-4xl font-bold optimize-text text-green-600">5+</div>
                             <div class="text-gray-700 mt-2 optimize-text">Years of Excellence</div>
                         </div>
                         <div class="counter-container flex flex-col items-center mb-6">
-                            <div class="text-4xl font-bold counter optimize-text" id="farmerCounter">0</div>
+                            <div class="text-4xl font-bold optimize-text text-green-600">10k+</div>
                             <div class="text-gray-700 mt-2 optimize-text">Farmers Empowered</div>
                         </div>
                     </div>
@@ -428,7 +428,8 @@
                      loading="lazy"
                      decoding="async"
                      fetchpriority="low"
-                     class="relative w-full h-[350px] object-cover object-center rounded-2xl">
+                     class="relative w-full h-[350px] object-cover object-center rounded-2xl"
+                     onerror="this.onerror=null; this.src='image/Home/south_india.png'; console.log('Mission image fallback loaded');">
                         
                         <!-- Simplified gradient overlay -->
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
@@ -436,7 +437,7 @@
                         <!-- Image caption -->
                         <div class="absolute bottom-4 left-0 right-0 text-center">
                             <span class="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-gray-800 shadow">
-                                Sustainable Farming Excellence
+                                Sustainable Farming Practices
                             </span>
                         </div>
                     </div>
@@ -691,7 +692,13 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <a href="index.html" class="inline-flex items-center mb-4">
-                        <img src="image/Logo/logo.png" alt="MAP logo" class="h-8 mr-2 object-contain" width="32" height="32" decoding="async" style="aspect-ratio: auto;">
+                        <img src="image/Logo/logo.png" 
+                             alt="MAP logo" 
+                             class="h-8 mr-2 object-contain" 
+                             width="32" height="32" 
+                             decoding="async" 
+                             style="aspect-ratio: auto;"
+                             onerror="this.onerror=null; this.style.display='none'; console.log('Logo fallback activated');">
                         <span class="text-xl font-bold text-gray-800 logo-text">
                             <span class="logo-m">M</span><span class="logo-a">A</span><span class="logo-p">P</span>
                         </span>
@@ -786,6 +793,31 @@ Trichy, TN 620010</span>
             products: false,
             gallery: false
         };
+
+        // Add preloading for mission section image
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload the sustainable agriculture image
+            const missionImg = new Image();
+            missionImg.src = 'image/Home/Sustainable_Agriculture.jpg';
+            
+            // Set a timeout to check if image is loaded
+            setTimeout(() => {
+                const missionSection = document.querySelector('#vision-mission img');
+                if (missionSection && !missionImg.complete) {
+                    console.log('Mission image taking too long to load, trying fallback');
+                    missionSection.src = 'image/Home/south_india.png';
+                }
+            }, 3000); // 3 seconds timeout
+            
+            // Add handlers for vision-mission image
+            const visionImage = document.querySelector('#vision-mission img');
+            if (visionImage) {
+                visionImage.onload = function() {
+                    this.classList.add('image-loaded');
+                    console.log('Mission image loaded successfully');
+                };
+            }
+        });
 
         // Immediate counter initialization for stat counters in hero section
         function initHeroCounters() {
