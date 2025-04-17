@@ -364,4 +364,190 @@ a.bg-gradient-to-r.from-brand-primary:hover,
 
 .animate-float {
     animation: float 6s ease-in-out infinite;
+}
+
+/* Performance optimizations for homepage */
+#hero-video {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+    contain: paint;
+}
+
+.video-container {
+    contain: content;
+}
+
+/* Reduce layout shifts with content-visibility */
+.section-content {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
+}
+
+/* Add style for low-end devices */
+@media (max-width: 768px), (max-height: 600px) {
+    #hero-video {
+        opacity: 0.6 !important; /* Use lower opacity on mobile */
+    }
+    
+    .animated-element {
+        animation-duration: 0.5s !important; /* Speed up animations on mobile */
+    }
+    
+    .section-bg {
+        background-attachment: scroll !important; /* Prevent fixed backgrounds on mobile */
+    }
+}
+
+/* Optimize image rendering */
+img {
+    content-visibility: auto;
+    will-change: opacity;
+}
+
+/* Optimize for better performance during scroll */
+.has-parallax {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Enhanced image loading for products */
+.product-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    will-change: opacity;
+}
+
+.product-image.loaded {
+    opacity: 1;
+}
+
+/* Reduce layout thrashing during scroll */
+.optimize-scroll {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Optimize GPU rendering for product cards */
+.product-card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Further reduce memory usage for offscreen content */
+@media (prefers-reduced-motion: reduce) {
+    .animated-element, 
+    .animation-container {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .product-image {
+        transition-duration: 0.1s !important;
+    }
+}
+
+/* Performance optimizations for Vision & Mission section */
+#vision-mission {
+  contain: content;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+#vision-mission img {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize rendering of counter elements */
+.counter-container {
+  contain: layout style;
+}
+
+.counter {
+  font-variant-numeric: tabular-nums;
+  will-change: contents;
+}
+
+/* Add content-visibility for better rendering */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 200px;
+  contain: content;
+}
+
+.content-visible {
+  content-visibility: visible;
+}
+
+/* Optimize animations to use transform instead of other properties */
+@media (prefers-reduced-motion: no-preference) {
+  .optimize-animation {
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    will-change: transform, opacity;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduce rendering cost for images with transform */
+.image-loaded {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+/* Add image loading transition */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Reduce layout shifts by setting aspect ratios */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.aspect-ratio-container > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optimize text rendering */
+.optimize-text {
+  text-rendering: optimizeSpeed;
+}
+
+@media (max-width: 768px) {
+  /* Further reduce visual elements on mobile */
+  .mobile-optimize {
+    background-image: none !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Simplify animations on mobile */
+  [data-aos] {
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
 } 

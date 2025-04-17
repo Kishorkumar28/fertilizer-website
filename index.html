@@ -377,31 +377,13 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 relative overflow-hidden">
-        <!-- Luxury premium overlay -->
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-white/80 to-brand-secondary/10 backdrop-blur-sm"></div>
-        
-        <!-- Premium background elements -->
-        <div class="absolute -top-20 -right-20 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl max-h-96 bg-white/5 backdrop-blur-sm rounded-full rotate-12 border border-white/20"></div>
-        
-        <!-- Animated floating particles -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
-            <div class="absolute h-2 w-2 rounded-full bg-brand-primary animate-float" style="top: 10%; left: 15%; animation-delay: 0s; animation-duration: 8s;"></div> <!-- Style attribute kept -->
-            <div class="absolute h-3 w-3 rounded-full bg-brand-secondary animate-float" style="top: 30%; right: 25%; animation-delay: 1s; animation-duration: 12s;"></div> <!-- Style attribute kept -->
-            <div class="absolute h-2 w-2 rounded-full bg-brand-accent animate-float" style="bottom: 20%; left: 30%; animation-delay: 2s; animation-duration: 10s;"></div> <!-- Style attribute kept -->
-            <div class="absolute h-4 w-4 rounded-full bg-brand-primary/50 animate-float" style="bottom: 30%; right: 10%; animation-delay: 3s; animation-duration: 14s;"></div> <!-- Style attribute kept -->
-        </div>
-        
-        <div class="container mx-auto px-4 relative z-10" data-aos="fade-up" data-aos-duration="800">
-            
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="py-16 content-visibility-auto">
+        <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-6 mt-4 relative" data-aos="fade-up">
                     <span class="relative inline-block">
                         <span class="text-[#1e293b] tracking-tight">Our Vision & Mission</span>
-                        <!-- Removed underline as requested -->
                     </span>
                 </h2>
                 <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium" data-aos="fade-up" data-aos-delay="100">
@@ -409,71 +391,59 @@
             </p>
         </div>
 
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="900" class="bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl border border-white/50 transform hover:scale-[1.02] transition-all duration-500">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="600" class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 will-change-transform">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 relative inline-block">
                         Sustainable Agriculture
-                        <div class="absolute -bottom-2 left-0 w-1/2 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full"></div>
+                        <div class="w-24 h-1 bg-green-500 rounded-full mt-2"></div>
                     </h3>
                     <p class="text-gray-600 mb-8 leading-relaxed">
                     Our team of agricultural scientists works tirelessly to develop fertilizer formulations 
                     that not only increase yields but also improve long-term soil health and reduce environmental impact.
                     </p>
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center p-4 bg-white rounded-lg shadow-md transform transition duration-300 hover:shadow-lg" data-aos="flip-left" data-aos-delay="300">
-                            <h3 class="text-4xl font-bold text-brand-primary">
-                                <span class="counter" data-target="5">0</span><span>+</span>
-                        </h3>
-                            <p class="font-medium text-sm mt-1 text-gray-700">
-                                Years of Excellence
-                            </p>
+                        <div class="counter-container flex flex-col items-center mb-6">
+                            <div class="text-4xl font-bold counter optimize-text" id="yearCounter">0</div>
+                            <div class="text-gray-700 mt-2 optimize-text">Years of Excellence</div>
                         </div>
-                        <div class="text-center p-4 bg-white rounded-lg shadow-md transform transition duration-300 hover:shadow-lg" data-aos="flip-right" data-aos-delay="300">
-                            <h3 class="text-4xl font-bold text-brand-primary">
-                                <span class="counter" data-target="12">0</span><span>k+</span>
-                        </h3>
-                            <p class="font-medium text-sm mt-1 text-gray-700">
-                                Farmers Empowered
-                            </p>
+                        <div class="counter-container flex flex-col items-center mb-6">
+                            <div class="text-4xl font-bold counter optimize-text" id="farmerCounter">0</div>
+                            <div class="text-gray-700 mt-2 optimize-text">Farmers Empowered</div>
                         </div>
                     </div>
                 </div>
-                <div class="relative" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000">
-                    <!-- Multi-layered premium frame -->
-                    <div class="absolute -inset-8 bg-gradient-to-br from-white/80 via-white/40 to-brand-light/30 backdrop-blur-md rounded-3xl shadow-2xl z-0 transform rotate-3 border border-white/50"></div>
-                    <div class="absolute -inset-6 bg-white/60 backdrop-blur-sm rounded-3xl shadow-xl z-0 transform -rotate-1 border border-white/50"></div>
+                <div class="relative" data-aos="fade-left" data-aos-delay="150" data-aos-duration="600">
+                    <!-- Simplified frame with fewer layers -->
+                    <div class="absolute -inset-4 bg-brand-light/30 rounded-3xl z-0"></div>
                     
-                    <!-- Golden decorative elements -->
-                    <div class="absolute -top-10 -left-10 w-20 h-20 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-full backdrop-blur-sm z-10"></div>
-                    <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-full backdrop-blur-sm z-10"></div>
-                    
-                    <!-- Premium image container with luxury styling -->
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl w-4/5 mx-auto border border-white/50">
-                        <!-- Decorative corner accents -->
-                        <div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-brand-primary/50 rounded-tl-lg z-20"></div>
-                        <div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-brand-primary/50 rounded-tr-lg z-20"></div>
-                        <div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-brand-primary/50 rounded-bl-lg z-20"></div>
-                        <div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-brand-primary/50 rounded-br-lg z-20"></div>
+                    <!-- Premium image container with optimized styling -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg w-5/6 mx-auto border border-white/50">
+                        <!-- Reduced decorative elements -->
+                        <div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-brand-primary/50 rounded-tl-lg"></div>
+                        <div class="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-brand-primary/50 rounded-br-lg"></div>
                 
                 <img src="image/Home/Sustainable_Agriculture.jpg" 
                      alt="Sustainable Farming Practices" 
-                             width="600" height="400"
-                             class="relative w-full max-h-[350px] object-cover object-center rounded-2xl transform transition-transform duration-1000 hover:scale-105 z-10 filter saturate-[1.1] contrast-[1.05]">
+                     width="600" height="350"
+                     loading="lazy"
+                     decoding="async"
+                     fetchpriority="low"
+                     class="relative w-full h-[350px] object-cover object-center rounded-2xl">
                         
-                        <!-- Premium gradient overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-white/10 z-10"></div>
+                        <!-- Simplified gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
                         
                         <!-- Image caption -->
-                        <div class="absolute bottom-4 left-0 right-0 text-center z-20">
-                            <span class="px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 shadow-lg">
+                        <div class="absolute bottom-4 left-0 right-0 text-center">
+                            <span class="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-gray-800 shadow">
                                 Sustainable Farming Excellence
                             </span>
                         </div>
                     </div>
                     
-                    <!-- Premium floating badge -->
-                    <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-brand-primary to-brand-secondary text-white rounded-full p-4 shadow-lg z-30 animate-pulse-slow">
-                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <!-- Simpler badge -->
+                    <div class="absolute -bottom-2 -right-2 bg-brand-primary text-white rounded-full p-3 shadow">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                 </div>
@@ -764,8 +734,8 @@
                     <ul class="space-y-2">
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-brand-primary mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
                             <span class="text-gray-600">Mentore Agro Products Pvt. Ltd.
 14/11 Lakshmipuram 2nd Street,
@@ -1860,7 +1830,8 @@ Trichy, TN 620010</span>
                     exploreButton.style.color = 'white';
                 });
                 
-                observer.observe(exploreButton, { 
+                // Use observer manager instead of direct observe call
+                window.observerManager.addObserver(observer, exploreButton, { 
                     attributes: true,
                     attributeFilter: ['class', 'style']
                 });
@@ -1888,9 +1859,19 @@ Trichy, TN 620010</span>
                 '.hover\\:bg-green-600'
             ].join(','));
             
+            // Add style once instead of setting inline styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .forced-white-text,
+                .forced-white-text:hover {
+                    color: white !important;
+                }
+            `;
+            document.head.appendChild(style);
+            
             // Apply forced white text to all green buttons
             greenButtons.forEach(button => {
-                // Set initial color
+                // Set initial color using class instead of inline style
                 if (button.classList.contains('bg-brand-primary') || 
                     button.classList.contains('bg-green-500') ||
                     button.classList.contains('bg-green-600') ||
@@ -1898,27 +1879,54 @@ Trichy, TN 620010</span>
                     button.classList.contains('bg-green-800') ||
                     button.classList.contains('bg-gradient-to-r') ||
                     button.classList.contains('glow-on-hover')) {
-                    button.style.color = 'white';
                     
-                    // Override hover behavior
-                    button.addEventListener('mouseenter', function() {
-                        this.style.color = 'white';
-                    });
+                    button.classList.add('forced-white-text');
                     
-                    button.addEventListener('mouseleave', function() {
-                        this.style.color = 'white';
-                    });
-                    
-                    // Observe for class/style changes
+                    // Use a single observer for each button, managed by observerManager
                     const observer = new MutationObserver(function() {
-                        button.style.color = 'white';
+                        if (!button.classList.contains('forced-white-text')) {
+                            button.classList.add('forced-white-text');
+                        }
                     });
                     
-                    observer.observe(button, { 
+                    window.observerManager.addObserver(observer, button, { 
                         attributes: true,
                         attributeFilter: ['class', 'style']
                     });
                 }
+            });
+            
+            // Set up a MutationObserver for the entire document to catch dynamically added buttons
+            const bodyObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(mutation => {
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(node => {
+                            if (node.nodeType === 1) { // Element node
+                                // Check if it's a button or contains buttons
+                                const newButtons = node.classList && 
+                                    (node.classList.contains('bg-brand-primary') || 
+                                     node.classList.contains('bg-green-500') ||
+                                     node.classList.contains('bg-green-600') ||
+                                     node.classList.contains('glow-on-hover')) ? 
+                                    [node] : 
+                                    node.querySelectorAll('.bg-brand-primary, .bg-green-500, .bg-green-600, .glow-on-hover');
+                                
+                                if (newButtons && newButtons.length) {
+                                    newButtons.forEach(button => {
+                                        button.classList.add('forced-white-text');
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Observe only the most necessary parts of the DOM
+            const mainContent = document.querySelector('main') || document.body;
+            window.observerManager.addObserver(bodyObserver, mainContent, { 
+                childList: true,
+                subtree: true
             });
         });
     </script>
@@ -1937,22 +1945,6 @@ Trichy, TN 620010</span>
                 sectionsToStyle.some(section => el.textContent.trim() === section || el.textContent.includes(section))
             );
             
-            // Set consistent text color for all targeted section labels
-            filteredElements.forEach(element => {
-                // Apply consistent styling
-                element.classList.remove('text-green-600');
-                element.classList.add('text-brand-primary');
-                
-                // Also update the background to match brand color scheme
-                if (element.classList.contains('bg-green-100')) {
-                    element.classList.remove('bg-green-100');
-                    element.classList.add('bg-brand-light/30');
-                }
-                
-                // Add permanent class
-                element.classList.add('branded-section-label');
-            });
-            
             // Add global style to ensure consistent coloring
             const style = document.createElement('style');
             style.textContent = `
@@ -1965,28 +1957,276 @@ Trichy, TN 620010</span>
             `;
             document.head.appendChild(style);
             
-            // Add observers to maintain styling
-            const observers = [];
+            // Set consistent text color for all targeted section labels
             filteredElements.forEach(element => {
-                const observer = new MutationObserver(function() {
-                    // Ensure the element maintains our styling
-                    if (!element.classList.contains('text-brand-primary')) {
-                        element.classList.add('text-brand-primary');
-                    }
-                    if (!element.classList.contains('branded-section-label')) {
-                        element.classList.add('branded-section-label');
-                    }
-                    if (element.classList.contains('text-green-600')) {
-                        element.classList.remove('text-green-600');
+                // Apply consistent styling
+                element.classList.remove('text-green-600');
+                element.classList.add('text-brand-primary');
+                element.classList.add('branded-section-label');
+                
+                // Also update the background to match brand color scheme
+                if (element.classList.contains('bg-green-100')) {
+                    element.classList.remove('bg-green-100');
+                    element.classList.add('bg-brand-light/30');
+                }
+            });
+            
+            // Use a single observer for all section labels to reduce memory usage
+            const sectionsObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(mutation => {
+                    const target = mutation.target;
+                    if (sectionsToStyle.some(section => 
+                        target.textContent.trim() === section || 
+                        target.textContent.includes(section))) {
+                        
+                        // Ensure consistent styling is maintained
+                        if (!target.classList.contains('branded-section-label')) {
+                            target.classList.add('branded-section-label');
+                            target.classList.add('text-brand-primary');
+                        }
+                        if (target.classList.contains('text-green-600')) {
+                            target.classList.remove('text-green-600');
+                        }
                     }
                 });
-                
-                observer.observe(element, { 
+            });
+            
+            // Observer for new section labels being added to the DOM
+            const bodyObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(mutation => {
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(node => {
+                            if (node.nodeType === 1) { // Element node
+                                const newLabels = node.querySelectorAll('.text-green-600');
+                                newLabels.forEach(label => {
+                                    if (sectionsToStyle.some(section => 
+                                        label.textContent.trim() === section || 
+                                        label.textContent.includes(section))) {
+                                        
+                                        label.classList.remove('text-green-600');
+                                        label.classList.add('text-brand-primary');
+                                        label.classList.add('branded-section-label');
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Register observers with the manager
+            filteredElements.forEach(element => {
+                window.observerManager.addObserver(sectionsObserver, element, { 
                     attributes: true,
+                    characterData: true,
                     attributeFilter: ['class', 'style']
                 });
+            });
+            
+            // Only observe main content area to reduce overhead
+            const mainContent = document.querySelector('main') || document.body;
+            window.observerManager.addObserver(bodyObserver, mainContent, { 
+                childList: true,
+                subtree: true
+            });
+        });
+    </script>
+
+    <!-- Observer Management System to prevent memory leaks -->
+    <script>
+        // Create a global observer manager to track and clean up observers
+        window.observerManager = {
+            observers: [],
+            timeouts: [],
+            intervals: [],
+            
+            // Add observer to tracking
+            addObserver: function(observer, target, options) {
+                this.observers.push({
+                    observer: observer,
+                    target: target,
+                    options: options
+                });
+                observer.observe(target, options);
+                return observer;
+            },
+            
+            // Add timeout to tracking
+            addTimeout: function(callback, delay) {
+                const id = setTimeout(() => {
+                    callback();
+                    // Auto-remove from tracking once fired
+                    this.removeTimeout(id);
+                }, delay);
+                this.timeouts.push(id);
+                return id;
+            },
+            
+            // Add interval to tracking
+            addInterval: function(callback, delay) {
+                const id = setInterval(callback, delay);
+                this.intervals.push(id);
+                return id;
+            },
+            
+            // Remove observer from tracking and disconnect
+            removeObserver: function(observer) {
+                const index = this.observers.findIndex(o => o.observer === observer);
+                if (index !== -1) {
+                    observer.disconnect();
+                    this.observers.splice(index, 1);
+                    return true;
+                }
+                return false;
+            },
+            
+            // Remove timeout from tracking
+            removeTimeout: function(id) {
+                const index = this.timeouts.indexOf(id);
+                if (index !== -1) {
+                    clearTimeout(id);
+                    this.timeouts.splice(index, 1);
+                    return true;
+                }
+                return false;
+            },
+            
+            // Remove interval from tracking
+            removeInterval: function(id) {
+                const index = this.intervals.indexOf(id);
+                if (index !== -1) {
+                    clearInterval(id);
+                    this.intervals.splice(index, 1);
+                    return true;
+                }
+                return false;
+            },
+            
+            // Clean up all tracked resources
+            cleanupAll: function() {
+                // Disconnect all observers
+                this.observers.forEach(o => {
+                    if (o.observer && typeof o.observer.disconnect === 'function') {
+                        o.observer.disconnect();
+                    }
+                });
+                this.observers = [];
                 
-                observers.push(observer);
+                // Clear all timeouts
+                this.timeouts.forEach(id => clearTimeout(id));
+                this.timeouts = [];
+                
+                // Clear all intervals
+                this.intervals.forEach(id => clearInterval(id));
+                this.intervals = [];
+                
+                console.log('All observers, timeouts, and intervals cleaned up');
+            },
+            
+            // Clean up resources for elements no longer in DOM
+            cleanupDetachedElements: function() {
+                this.observers = this.observers.filter(o => {
+                    if (!document.contains(o.target)) {
+                        o.observer.disconnect();
+                        return false; // Remove from array
+                    }
+                    return true; // Keep in array
+                });
+                
+                console.log('Cleaned up observers for detached elements');
+            }
+        };
+        
+        // Set up periodic cleanup and page unload cleanup
+        document.addEventListener('DOMContentLoaded', function() {
+            // Periodically clean up observers for detached elements
+            window.observerManager.addInterval(function() {
+                window.observerManager.cleanupDetachedElements();
+            }, 60000); // Check every minute
+            
+            // Clean up everything before page unload
+            window.addEventListener('beforeunload', function() {
+                window.observerManager.cleanupAll();
+            });
+        });
+    </script>
+
+    <!-- Script to clean up memory usage periodically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Memory cleanup function
+            function performMemoryCleanup() {
+                console.log('Performing scheduled memory cleanup');
+                
+                // 1. Clean up all observers for detached elements
+                window.observerManager.cleanupDetachedElements();
+                
+                // 2. Remove event listeners from detached elements (not directly possible in JS)
+                // But we can force garbage collection if available
+                if (window.gc) {
+                    try {
+                        window.gc();
+                    } catch (e) {
+                        console.log('Manual garbage collection not available');
+                    }
+                }
+                
+                // 3. Clean up any cached references
+                if (window.memoryManager && typeof window.memoryManager.cleanupCache === 'function') {
+                    window.memoryManager.cleanupCache();
+                }
+                
+                // 4. Purge unused images from cache by setting src to empty and back
+                const hiddenImages = Array.from(document.querySelectorAll('img'))
+                    .filter(img => {
+                        const rect = img.getBoundingClientRect();
+                        // If image is far outside viewport
+                        return (rect.bottom < -1000 || 
+                                rect.top > window.innerHeight + 1000);
+                    });
+                
+                hiddenImages.forEach(img => {
+                    if (!img.dataset.originalSrc) {
+                        img.dataset.originalSrc = img.src;
+                        img.src = '';
+                        // Mark for restoration when scrolled into view
+                        img.classList.add('memory-optimized');
+                    }
+                });
+                
+                // 5. Check for and restore images that are now visible
+                const visibleOptimizedImages = Array.from(document.querySelectorAll('img.memory-optimized'))
+                    .filter(img => {
+                        const rect = img.getBoundingClientRect();
+                        return (rect.bottom > -200 && 
+                                rect.top < window.innerHeight + 200);
+                    });
+                
+                visibleOptimizedImages.forEach(img => {
+                    if (img.dataset.originalSrc) {
+                        img.src = img.dataset.originalSrc;
+                        img.classList.remove('memory-optimized');
+                    }
+                });
+                
+                // Log cleanup complete
+                console.log(`Memory cleanup complete. ${hiddenImages.length} images optimized, ${visibleOptimizedImages.length} images restored`);
+            }
+            
+            // Set up periodic memory cleanup
+            window.observerManager.addInterval(performMemoryCleanup, 120000); // Every 2 minutes
+            
+            // Also perform cleanup when tab becomes visible again
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'visible') {
+                    performMemoryCleanup();
+                }
+            });
+            
+            // Trigger initial cleanup after page is fully loaded
+            window.addEventListener('load', function() {
+                // Wait a short time after load to ensure everything is stable
+                window.observerManager.addTimeout(performMemoryCleanup, 10000);
             });
         });
     </script>

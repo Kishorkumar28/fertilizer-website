@@ -142,6 +142,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Video loading optimization script (Event Listeners)
     const video = document.getElementById('hero-video');
     if (video) {
+        // Reduce initial load - set to lowest priority
+        video.fetchpriority = "low";
+        
+        // More aggressive lazy loading - only start loading when close to viewport
+        const videoPreloader = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                // First just load metadata to save memory
+                video.preload = "metadata";
+                // Wait a moment before actually loading the video
+                setTimeout(() => {
+                    // Only actually load if page has been visible for a while
+                    if (!document.hidden) {
+                        video.preload = "auto";
+                    }
+                }, 1000);
+                videoPreloader.disconnect();
+            }
+        }, { 
+            rootMargin: '200px 0px', // Preload when within 200px
+            threshold: 0
+        });
+        videoPreloader.observe(video);
+        
         // Add error handling
         video.addEventListener('error', function() {
             console.error('Video failed to load');
@@ -151,6 +174,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 gradientOverlay.style.opacity = '1';
             }
         });
+        
+        // Reduce quality on mobile or if page is laggy
+        const reduceVideoQuality = () => {
+            // For mobile or laggy devices
+            if (window.innerWidth <= 768 || 
+                (performance.memory && performance.memory.usedJSHeapSize > 200000000)) {
+                // Reduce playback rate more significantly
+                video.playbackRate = 0.3;
+                
+                // Set lowest quality settings
+                if (video.style.filter !== 'blur(1px)') {
+                    video.style.transform = 'scale(1)';
+                    video.style.filter = 'blur(1px)';
+                    video.style.opacity = '0.8';
+                    video.dataset.quality = 'low';
+                    
+                    // Make even more aggressive for very slow devices
+                    if (performance.memory && performance.memory.usedJSHeapSize > 300000000) {
+                        video.style.filter = 'blur(2px) brightness(0.9)';
+                        video.playbackRate = 0.2;
+                    }
+                }
+            }
+        };
+        
+        // On initial play, check if we need to drop quality
+        video.addEventListener('playing', function() {
+            // Scale down for smoother playback
+            video.playbackRate = 0.5;
+            
+            // Check if we need to reduce quality even more
+            reduceVideoQuality();
+            
+            // Schedule periodic quality checks
+            const qualityInterval = setInterval(reduceVideoQuality, 10000);
+            // Store the interval for cleanup
+            if (typeof cleanup !== 'undefined' && cleanup.intervals) {
+                cleanup.intervals.add(qualityInterval);
+            }
+        }, { once: true });
         
         // Optimize video playback using requestVideoFrameCallback if available
         if ('requestVideoFrameCallback' in HTMLVideoElement.prototype) {
@@ -1024,7 +1087,234 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cleanup on page unload (redundant if already in main script's beforeunload listener)
     // window.addEventListener('beforeunload', () => { ... });
-}); // End of main DOMContentLoaded listener 
+
+    /**
+     * Image optimization for better performance
+     */
+    const productImages = document.querySelectorAll('.product-image');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const src = img.getAttribute('data-src');
+                if (src) {
+                    img.setAttribute('src', src);
+                    img.onload = () => {
+                        img.classList.add('loaded');
+                    };
+                    observer.unobserve(img);
+                }
+            }
+        });
+    }, {
+        rootMargin: '200px 0px',
+        threshold: 0.01
+    });
+
+    productImages.forEach(img => {
+        // Store original src in data-src and use a placeholder
+        if (!img.getAttribute('data-src') && img.getAttribute('src')) {
+            img.setAttribute('data-src', img.getAttribute('src'));
+            img.setAttribute('src', 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E');
+            imageObserver.observe(img);
+        }
+    });
+
+    // Disable animations when not visible
+    const animatedSections = document.querySelectorAll('.animated-element, .section-content');
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.willChange = 'opacity, transform';
+            } else {
+                entry.target.style.willChange = 'auto';
+            }
+        });
+    }, {
+        rootMargin: '50px',
+        threshold: 0.1
+    });
+
+    animatedSections.forEach(section => {
+        animationObserver.observe(section);
+    });
+
+    // Cleanup observers on page unload
+    window.addEventListener('beforeunload', () => {
+        imageObserver.disconnect();
+        animationObserver.disconnect();
+    });
+
+    // Optimize AOS animations for better performance
+    AOS.init({
+        // Less intensive settings for better performance
+        duration: 600,
+        easing: 'ease',
+        once: true,         // Animation occurs only once
+        mirror: false,      // No mirroring of animations when scrolling up
+        anchorPlacement: 'top-bottom',
+        disable: window.innerWidth < 768 ? true : false, // Disable on mobile
+        throttleDelay: 99,  // Increase throttle delay for performance
+    });
+    
+    // Performance optimization for counters
+    initVisibilityBasedCounters();
+    
+    // Optimize scroll-based animations
+    optimizeScrollHandlers();
+    
+    // Implement intersection observers for lazy content
+    setupLazyContentLoading();
+    
+    // Optimize vision & mission section specifically
+    optimizeVisionMissionSection();
+});
+
+// A more efficient counter animation that only triggers when visible
+function initVisibilityBasedCounters() {
+    const counterElements = document.querySelectorAll('.counter');
+    
+    // If no counters exist, exit early
+    if (counterElements.length === 0) return;
+    
+    // Create an observer instance
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                
+                // Set the initial value directly without animation if target is small
+                if (target <= 10) {
+                    counter.innerText = target;
+                    observer.unobserve(counter);
+                    return;
+                }
+                
+                // Start from the value already shown or 0
+                let currentCount = parseInt(counter.innerText) || 0;
+                
+                // Only animate if needed
+                if (currentCount < target) {
+                    // Calculate duration based on target - faster for smaller numbers
+                    const duration = Math.min(1500, Math.max(500, target * 10));
+                    const increment = Math.ceil(target / (duration / 16)); // ~60fps
+                    
+                    // Use requestAnimationFrame for optimal performance
+                    const updateCounter = () => {
+                        currentCount += increment;
+                        if (currentCount >= target) {
+                            counter.innerText = target;
+                            observer.unobserve(counter);
+                        } else {
+                            counter.innerText = currentCount;
+                            requestAnimationFrame(updateCounter);
+                        }
+                    };
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px'
+    });
+    
+    // Observe all counter elements
+    counterElements.forEach(counter => {
+        observer.observe(counter);
+    });
+}
+
+// Optimize scroll event handlers to reduce layout thrashing
+function optimizeScrollHandlers() {
+    // Use passive listeners for better scroll performance
+    window.addEventListener('scroll', scrollHandler, { passive: true });
+    
+    // Replace multiple scroll-related effects with a unified handler
+    function scrollHandler() {
+        // Use requestAnimationFrame to process scroll events at render time
+        if (!window.scrollHandlerScheduled) {
+            window.scrollHandlerScheduled = true;
+            requestAnimationFrame(() => {
+                // Process all scroll-based effects here
+                window.scrollHandlerScheduled = false;
+            });
+        }
+    }
+}
+
+// Setup lazy loading for content sections using Intersection Observer
+function setupLazyContentLoading() {
+    // Target heavy sections that should only render when needed
+    const heavySections = document.querySelectorAll('.content-visibility-auto');
+    
+    if (heavySections.length === 0) return;
+    
+    const options = {
+        rootMargin: '200px 0px', // Load content 200px before it comes into view
+        threshold: 0.01
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Enable full rendering for visible sections
+                entry.target.classList.add('content-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+    
+    heavySections.forEach(section => {
+        observer.observe(section);
+    });
+}
+
+// Specific optimizations for Vision & Mission section
+function optimizeVisionMissionSection() {
+    const visionSection = document.getElementById('vision-mission');
+    if (!visionSection) return;
+    
+    // Optimize image loading
+    const images = visionSection.querySelectorAll('img');
+    images.forEach(img => {
+        // Ensure all images have loading="lazy" attribute
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better rendering performance
+        if (!img.hasAttribute('decoding')) {
+            img.setAttribute('decoding', 'async');
+        }
+        
+        // Set fetchpriority based on visibility
+        if (!img.hasAttribute('fetchpriority')) {
+            img.setAttribute('fetchpriority', 'low');
+        }
+        
+        // Properly size images to prevent layout shifts
+        img.onload = function() {
+            img.classList.add('image-loaded');
+        };
+    });
+    
+    // Optimize animations by removing unnecessary ones
+    const animatedElements = visionSection.querySelectorAll('[data-aos]');
+    if (animatedElements.length > 5) {
+        // If too many animations, only keep the most important ones
+        let count = 0;
+        animatedElements.forEach(el => {
+            if (count > 4) {
+                el.removeAttribute('data-aos');
+                el.removeAttribute('data-aos-delay');
+                el.removeAttribute('data-aos-duration');
+            }
+            count++;
+        });
+    }
+}
 
 // Animation Initialization Script (Moved from index.html)
 // Flag to track initializations
